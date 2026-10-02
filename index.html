@@ -13,7 +13,6 @@
   <meta property="og:url" content="https://github.com/hamzads077-ds" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Theme Initialization (Prevents FOUC) -->
   <script>
     if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       document.documentElement.classList.add('dark');
@@ -22,18 +21,14 @@
     }
   </script>
 
-  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- AOS (Animate On Scroll) -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -70,14 +65,12 @@
   </script>
 
   <style>
-    /* Base Reset & Custom Accents */
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
 
-    /* Glassmorphism Navigation */
     .glass-nav {
       background: rgba(255, 255, 255, 0.88);
       backdrop-filter: blur(14px);
@@ -88,7 +81,6 @@
       border-color: rgba(30, 41, 59, 0.8);
     }
 
-    /* Subtle Card Hover Elevation */
     .feature-card {
       transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
     }
@@ -102,7 +94,6 @@
       box-shadow: 0 16px 30px -6px rgba(0, 0, 0, 0.4), 0 6px 12px -3px rgba(0, 0, 0, 0.3);
     }
 
-    /* Dot Background Texture for Hero */
     .dot-pattern {
       background-image: radial-gradient(#CBD5E1 1px, transparent 1px);
       background-size: 24px 24px;
@@ -111,13 +102,11 @@
       background-image: radial-gradient(#1E293B 1px, transparent 1px);
     }
 
-    /* Focus Visible Accessibility */
     a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
       outline: 2px solid #4F46E5;
       outline-offset: 2px;
     }
 
-    /* Text Wrap Balance */
     .text-balance {
       text-wrap: balance;
     }
@@ -125,11 +114,9 @@
 </head>
 <body class="bg-[#F8FAFC] dark:bg-[#0B0F19] text-slate-900 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-200 selection:bg-indigo-500/15 selection:text-indigo-900 dark:selection:bg-indigo-500/30 dark:selection:text-indigo-200">
 
-  <!-- ==================== 1. STICKY GLASSMORPHISM HEADER ==================== -->
   <header id="main-header" class="sticky top-0 z-50 w-full glass-nav border-b border-slate-200/80 dark:border-slate-800/80 transition-all duration-200">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       
-      <!-- Zone 1: Single text element Brand Zone -->
       <a href="#home" class="group flex items-center gap-2.5 text-slate-900 dark:text-white font-bold text-base tracking-tight hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
         <span class="w-8 h-8 rounded-lg bg-indigo-600 text-white flex items-center justify-center text-xs font-mono font-semibold shadow-sm group-hover:bg-indigo-700 transition-colors">
           HS
@@ -137,7 +124,6 @@
         <span class="tracking-tight text-slate-900 dark:text-white font-bold">Muhammad Hamza Shah</span>
       </a>
 
-      <!-- Zone 2: Navigation Links (Desktop) -->
       <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600 dark:text-slate-300">
         <a href="#home" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors py-1 relative hover:after:w-full after:w-0 after:h-0.5 after:bg-indigo-600 after:absolute after:bottom-0 after:left-0 after:transition-all">Home</a>
         <a href="#about" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors py-1 relative hover:after:w-full after:w-0 after:h-0.5 after:bg-indigo-600 after:absolute after:bottom-0 after:left-0 after:transition-all">About</a>
@@ -146,9 +132,7 @@
         <a href="#contact" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors py-1 relative hover:after:w-full after:w-0 after:h-0.5 after:bg-indigo-600 after:absolute after:bottom-0 after:left-0 after:transition-all">Contact</a>
       </nav>
 
-      <!-- Zone 3: Controls, Icons & Dark Mode Toggle -->
       <div class="flex items-center gap-2.5 sm:gap-3">
-        <!-- Dark Mode Toggle Button -->
         <button 
           id="theme-toggle-btn" 
           type="button" 
@@ -159,22 +143,18 @@
           <i id="theme-toggle-icon" class="fa-solid fa-moon text-sm"></i>
         </button>
 
-        <!-- Direct GitHub -->
         <a href="https://github.com/hamzads077-ds" target="_blank" rel="noopener noreferrer" aria-label="Muhammad Hamza Shah GitHub Profile" class="w-9 h-9 rounded-lg border border-slate-200/90 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:border-slate-300 dark:hover:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800/80 flex items-center justify-center transition-all duration-200" title="GitHub">
           <i class="fa-brands fa-github text-base"></i>
         </a>
 
-        <!-- Direct LinkedIn -->
         <a href="https://www.linkedin.com/in/hamzads077" target="_blank" rel="noopener noreferrer" aria-label="Muhammad Hamza Shah LinkedIn Profile" class="w-9 h-9 rounded-lg border border-slate-200/90 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-[#0A66C2] dark:hover:text-[#38BDF8] hover:border-slate-300 dark:hover:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800/80 flex items-center justify-center transition-all duration-200" title="LinkedIn">
           <i class="fa-brands fa-linkedin-in text-base"></i>
         </a>
 
-        <!-- Direct WhatsApp -->
         <a href="https://wa.me/923180564651" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" class="w-9 h-9 rounded-lg border border-slate-200/90 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-[#25D366] hover:border-emerald-200 dark:hover:border-emerald-800/80 hover:bg-emerald-50/50 dark:hover:bg-emerald-950/40 flex items-center justify-center transition-all duration-200" title="WhatsApp: +923180564651">
           <i class="fa-brands fa-whatsapp text-lg"></i>
         </a>
 
-        <!-- Mobile Drawer Toggle -->
         <button id="mobile-menu-btn" type="button" class="md:hidden w-9 h-9 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center transition-colors" aria-label="Toggle navigation menu" aria-expanded="false">
           <i id="menu-icon" class="fa-solid fa-bars text-sm"></i>
         </button>
@@ -182,7 +162,6 @@
 
     </div>
 
-    <!-- Mobile Drawer Overlay & Panel -->
     <div id="mobile-menu" class="hidden md:hidden border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0E1526] px-4 pt-3 pb-6 space-y-3 shadow-lg">
       <div class="flex flex-col space-y-2 text-sm font-medium text-slate-700 dark:text-slate-200">
         <a href="#home" class="mobile-nav-link px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/60 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Home</a>
@@ -200,16 +179,13 @@
     </div>
   </header>
 
-  <!-- ==================== MAIN CONTENT ==================== -->
   <main class="flex-grow">
 
-    <!-- ==================== 2. HERO SECTION ==================== -->
     <section id="home" class="relative pt-16 pb-20 md:pt-24 md:pb-28 overflow-hidden dot-pattern">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div class="max-w-3xl" data-aos="fade-up" data-aos-duration="700">
           
-          <!-- Status Indicator -->
           <div class="inline-flex items-center gap-2 mb-6 text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-300 bg-white/90 dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 py-1.5 px-3.5 rounded-full shadow-subtle">
             <span class="relative flex h-2.5 w-2.5">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -218,31 +194,25 @@
             <span>Available for Data Science &amp; Analytics Internships</span>
           </div>
 
-          <!-- Headline -->
           <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold text-slate-900 dark:text-white tracking-tight leading-[1.15] text-balance mb-6">
             Bridging Statistical Theory with <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-indigo-700 to-sky-500 dark:from-indigo-400 dark:via-indigo-300 dark:to-sky-400">Python &amp; SQL</span> Development
           </h1>
 
-          <!-- Subheadline -->
           <p class="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mb-8">
             BS Statistical Data Science Student at International Islamic University Islamabad (IIUI), turning complex data into actionable analytical insights through quantitative rigor and reproducible code.
           </p>
 
-          <!-- Action Buttons -->
           <div class="flex flex-wrap items-center gap-4 pt-1">
-            <!-- Connect on WhatsApp -->
             <a href="https://wa.me/923180564651" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-5 py-3 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 rounded-lg shadow-sm hover:shadow transition-all duration-200 whitespace-nowrap">
               <i class="fa-brands fa-whatsapp text-lg text-emerald-300"></i>
               <span>Connect on WhatsApp</span>
             </a>
 
-            <!-- View GitHub -->
             <a href="https://github.com/hamzads077-ds" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 active:bg-slate-100 dark:active:bg-slate-800 rounded-lg shadow-subtle transition-all duration-200 whitespace-nowrap">
               <i class="fa-brands fa-github text-base text-slate-700 dark:text-slate-200"></i>
               <span>View GitHub</span>
             </a>
 
-            <!-- View LinkedIn Secondary -->
             <a href="https://www.linkedin.com/in/hamzads077" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-3 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-white/60 dark:hover:bg-slate-800/60 rounded-lg transition-colors whitespace-nowrap">
               <i class="fa-brands fa-linkedin text-[#0A66C2] dark:text-[#38BDF8] text-base"></i>
               <span>LinkedIn Profile</span>
@@ -250,7 +220,6 @@
             </a>
           </div>
 
-          <!-- Academic & Tooling Signature Bar -->
           <div class="mt-12 pt-8 border-t border-slate-200/90 dark:border-slate-800 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs text-slate-500 dark:text-slate-400 font-mono">
             <div>
               <span class="block text-slate-400 dark:text-slate-500 font-sans text-[11px] uppercase tracking-wider mb-1">Institution</span>
@@ -275,20 +244,16 @@
       </div>
     </section>
 
-    <!-- ==================== 3. ABOUT ME SECTION ==================== -->
     <section id="about" class="py-20 bg-white dark:bg-[#0E1526] border-y border-slate-200/80 dark:border-slate-800/80 transition-colors duration-200">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <!-- Section Header -->
         <div class="max-w-2xl mb-12" data-aos="fade-up" data-aos-duration="600">
           <p class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-2 font-mono">01. Background &amp; Philosophy</p>
           <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white tracking-tight">Analytical Mindset Rooted in Statistical Foundations</h2>
         </div>
 
-        <!-- 2-Column / Structured Card Layout -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
-          <!-- Narrative Left Column -->
           <div class="lg:col-span-7 space-y-5 text-slate-600 dark:text-slate-300 text-base leading-relaxed" data-aos="fade-up" data-aos-duration="650">
             <div class="bg-[#F8FAFC] dark:bg-[#131B2E] border border-slate-200/90 dark:border-slate-800 rounded-xl p-6 sm:p-7 shadow-subtle transition-colors">
               <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
@@ -303,7 +268,6 @@
               </p>
             </div>
 
-            <!-- Analytical Pillars -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
               <div class="p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0F172A] shadow-subtle transition-colors">
                 <div class="w-8 h-8 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-3">
@@ -327,7 +291,6 @@
             </div>
           </div>
 
-          <!-- Structured Right Column: Fast Facts & Core Highlights -->
           <div class="lg:col-span-5 space-y-4" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
             
             <div class="bg-gradient-to-br from-slate-900 to-indigo-950 text-white rounded-xl p-6 sm:p-7 shadow-card border border-slate-800/80 dark:border-slate-700/60">
@@ -370,7 +333,6 @@
               </div>
             </div>
 
-            <!-- Research / Analytics Approach Card -->
             <div class="bg-white dark:bg-[#131B2E] border border-slate-200 dark:border-slate-800 rounded-xl p-5 shadow-subtle transition-colors">
               <h4 class="text-xs font-semibold text-slate-900 dark:text-white uppercase tracking-wider mb-2 font-mono">Core Focus</h4>
               <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
@@ -385,11 +347,9 @@
       </div>
     </section>
 
-    <!-- ==================== 4. CORE SKILLS & TECH STACK SECTION ==================== -->
     <section id="skills" class="py-20 bg-[#F8FAFC] dark:bg-[#0B0F19] transition-colors duration-200">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <!-- Section Header -->
         <div class="max-w-2xl mb-14" data-aos="fade-up" data-aos-duration="600">
           <p class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-2 font-mono">02. Capabilities &amp; Tooling</p>
           <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white tracking-tight">Core Skills &amp; Tech Stack</h2>
@@ -397,23 +357,9 @@
             Balanced foundation across programming languages, mathematical &amp; statistical analytics, and modern developer environments.
           </p>
         </div>
-<!-- Direct Email Button -->
-<a href="mailto:your-email@gmail.com" class="flex items-center justify-between p-3.5 rounded-lg border border-slate-200/90 dark:border-slate-800 hover:border-indigo-300 dark:hover:border-indigo-700 hover:bg-indigo-50/30 dark:hover:bg-slate-800/60 transition-all duration-200 group">
-  <div class="flex items-center gap-3">
-    <div class="w-9 h-9 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold">
-      <i class="fa-regular fa-envelope text-base"></i>
-    </div>
-    <div>
-      <span class="text-sm font-semibold text-slate-900 dark:text-slate-100 block group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Direct Email</span>
-      <span class="text-xs text-slate-500 dark:text-slate-400 font-mono">hamza.ds.077@gmail.com</span>
-    </div>
-  </div>
-  <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors"></i>
-</a>
-        <!-- 3 Category Grid -->
+
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-          <!-- Category 1: Languages -->
           <div class="feature-card bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-subtle flex flex-col justify-between" data-aos="fade-up" data-aos-duration="650">
             <div>
               <div class="flex items-center justify-between mb-5">
@@ -428,7 +374,6 @@
               </p>
 
               <div class="space-y-4">
-                <!-- Python -->
                 <div class="p-3.5 rounded-lg bg-slate-50/70 dark:bg-[#1E293B]/60 border border-slate-200/80 dark:border-slate-700/60">
                   <div class="flex items-center justify-between mb-1.5">
                     <span class="font-semibold text-sm text-slate-900 dark:text-slate-100 flex items-center gap-2">
@@ -441,7 +386,6 @@
                   </p>
                 </div>
 
-                <!-- SQL -->
                 <div class="p-3.5 rounded-lg bg-slate-50/70 dark:bg-[#1E293B]/60 border border-slate-200/80 dark:border-slate-700/60">
                   <div class="flex items-center justify-between mb-1.5">
                     <span class="font-semibold text-sm text-slate-900 dark:text-slate-100 flex items-center gap-2">
@@ -462,7 +406,6 @@
             </div>
           </div>
 
-          <!-- Category 2: Statistical & Analytics -->
           <div class="feature-card bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-subtle flex flex-col justify-between" data-aos="fade-up" data-aos-duration="650" data-aos-delay="100">
             <div>
               <div class="flex items-center justify-between mb-5">
@@ -477,7 +420,6 @@
               </p>
 
               <div class="space-y-4">
-                <!-- Descriptive & Inferential -->
                 <div class="p-3.5 rounded-lg bg-slate-50/70 dark:bg-[#1E293B]/60 border border-slate-200/80 dark:border-slate-700/60">
                   <div class="font-semibold text-sm text-slate-900 dark:text-slate-100 mb-1 flex items-center gap-2">
                     <i class="fa-solid fa-calculator text-indigo-500 dark:text-indigo-400"></i> Statistics &amp; Probability
@@ -487,7 +429,6 @@
                   </p>
                 </div>
 
-                <!-- Statistical Modeling -->
                 <div class="p-3.5 rounded-lg bg-slate-50/70 dark:bg-[#1E293B]/60 border border-slate-200/80 dark:border-slate-700/60">
                   <div class="font-semibold text-sm text-slate-900 dark:text-slate-100 mb-1 flex items-center gap-2">
                     <i class="fa-solid fa-bezier-curve text-sky-500 dark:text-sky-400"></i> Statistical Modeling
@@ -497,7 +438,6 @@
                   </p>
                 </div>
 
-                <!-- Data Wrangling & Visualization -->
                 <div class="p-3.5 rounded-lg bg-slate-50/70 dark:bg-[#1E293B]/60 border border-slate-200/80 dark:border-slate-700/60">
                   <div class="font-semibold text-sm text-slate-900 dark:text-slate-100 mb-1 flex items-center gap-2">
                     <i class="fa-solid fa-filter text-indigo-500 dark:text-indigo-400"></i> Wrangling &amp; Visualization
@@ -515,7 +455,6 @@
             </div>
           </div>
 
-          <!-- Category 3: Developer Tools -->
           <div class="feature-card bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-subtle flex flex-col justify-between" data-aos="fade-up" data-aos-duration="650" data-aos-delay="200">
             <div>
               <div class="flex items-center justify-between mb-5">
@@ -530,7 +469,6 @@
               </p>
 
               <div class="space-y-4">
-                <!-- VS Code -->
                 <div class="p-3.5 rounded-lg bg-slate-50/70 dark:bg-[#1E293B]/60 border border-slate-200/80 dark:border-slate-700/60">
                   <div class="flex items-center justify-between mb-1.5">
                     <span class="font-semibold text-sm text-slate-900 dark:text-slate-100 flex items-center gap-2">
@@ -543,7 +481,6 @@
                   </p>
                 </div>
 
-                <!-- Jupyter Notebooks -->
                 <div class="p-3.5 rounded-lg bg-slate-50/70 dark:bg-[#1E293B]/60 border border-slate-200/80 dark:border-slate-700/60">
                   <div class="flex items-center justify-between mb-1.5">
                     <span class="font-semibold text-sm text-slate-900 dark:text-slate-100 flex items-center gap-2">
@@ -556,7 +493,6 @@
                   </p>
                 </div>
 
-                <!-- Git & GitHub -->
                 <div class="p-3.5 rounded-lg bg-slate-50/70 dark:bg-[#1E293B]/60 border border-slate-200/80 dark:border-slate-700/60">
                   <div class="flex items-center justify-between mb-1.5">
                     <span class="font-semibold text-sm text-slate-900 dark:text-slate-100 flex items-center gap-2">
@@ -582,11 +518,9 @@
       </div>
     </section>
 
-    <!-- ==================== 5. EDUCATION SECTION ==================== -->
     <section id="education" class="py-20 bg-white dark:bg-[#0E1526] border-y border-slate-200/80 dark:border-slate-800/80 transition-colors duration-200">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <!-- Section Header -->
         <div class="max-w-2xl mb-12" data-aos="fade-up" data-aos-duration="600">
           <p class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-2 font-mono">03. Academic Journey</p>
           <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white tracking-tight">Formal Education</h2>
@@ -595,14 +529,11 @@
           </p>
         </div>
 
-        <!-- Professional Timeline Card -->
         <div class="max-w-4xl" data-aos="fade-up" data-aos-duration="700">
           <div class="relative pl-6 sm:pl-8 border-l-2 border-indigo-200 dark:border-indigo-900/60">
             
-            <!-- Timeline Marker -->
             <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-indigo-600 border-4 border-white dark:border-[#0E1526] shadow-sm"></div>
 
-            <!-- Education Box -->
             <div class="bg-[#F8FAFC] dark:bg-[#131B2E] border border-slate-200 dark:border-slate-800 rounded-xl p-6 sm:p-8 shadow-subtle transition-colors">
               <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
                 <div>
@@ -621,7 +552,6 @@
                 Enrolled in the comprehensive Statistical Data Science program at IIUI. The curriculum bridges rigorous mathematical probability theory with practical computational implementations in Python and SQL to prepare graduates for analytical problem-solving in data-intensive domains.
               </p>
 
-              <!-- Highlights Grid (Unboxed, clean typography) -->
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 border-t border-slate-200/90 dark:border-slate-800 text-xs">
                 <div>
                   <h4 class="font-semibold text-slate-900 dark:text-slate-100 mb-2 flex items-center gap-1.5">
@@ -672,11 +602,9 @@
       </div>
     </section>
 
-    <!-- ==================== 6. DIRECT CONTACT & SOCIAL SECTION ==================== -->
     <section id="contact" class="py-20 bg-[#F8FAFC] dark:bg-[#0B0F19] transition-colors duration-200">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <!-- Section Header -->
         <div class="max-w-2xl mb-12" data-aos="fade-up" data-aos-duration="600">
           <p class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-2 font-mono">04. Get In Touch</p>
           <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white tracking-tight">Direct Contact &amp; Channels</h2>
@@ -687,10 +615,8 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
-          <!-- Contact Left: Bold Action Cards & Social Buttons -->
           <div class="lg:col-span-5 space-y-5" data-aos="fade-up" data-aos-duration="650">
             
-            <!-- WhatsApp Spotlight Card -->
             <div class="bg-white dark:bg-[#111827] border-2 border-emerald-500/40 dark:border-emerald-600/40 rounded-xl p-6 sm:p-7 shadow-card relative overflow-hidden transition-colors">
               <div class="absolute -right-6 -bottom-6 text-emerald-100 dark:text-emerald-950/30 opacity-60 text-9xl pointer-events-none">
                 <i class="fa-brands fa-whatsapp"></i>
@@ -706,7 +632,6 @@
                   Available for instant conversations regarding internships, analytical assignments, and technical queries.
                 </p>
 
-                <!-- Primary Big CTA -->
                 <a href="https://wa.me/923180564651" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-3 px-5 py-3.5 text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 rounded-lg shadow-sm hover:shadow transition-all duration-200">
                   <i class="fa-brands fa-whatsapp text-xl"></i>
                   <span>Chat on WhatsApp (+92 318 0564651)</span>
@@ -714,11 +639,22 @@
               </div>
             </div>
 
-            <!-- Social Links Grid -->
             <div class="bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-subtle space-y-4 transition-colors">
               <h4 class="text-xs font-semibold text-slate-900 dark:text-slate-200 uppercase tracking-wider font-mono">Professional Networks</h4>
               
-              <!-- LinkedIn Profile -->
+              <a href="mailto:hamza.ds.077@gmail.com" class="flex items-center justify-between p-3.5 rounded-lg border border-slate-200/90 dark:border-slate-800 hover:border-indigo-300 dark:hover:border-indigo-700 hover:bg-indigo-50/30 dark:hover:bg-slate-800/60 transition-all duration-200 group">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold">
+                    <i class="fa-regular fa-envelope text-base"></i>
+                  </div>
+                  <div>
+                    <span class="text-sm font-semibold text-slate-900 dark:text-slate-100 block group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Direct Email</span>
+                    <span class="text-xs text-slate-500 dark:text-slate-400 font-mono">hamza.ds.077@gmail.com</span>
+                  </div>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors"></i>
+              </a>
+
               <a href="https://www.linkedin.com/in/hamzads077" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3.5 rounded-lg border border-slate-200/90 dark:border-slate-800 hover:border-blue-300 dark:hover:border-blue-700 hover:bg-blue-50/30 dark:hover:bg-slate-800/60 transition-all duration-200 group">
                 <div class="flex items-center gap-3">
                   <div class="w-9 h-9 rounded-lg bg-[#0A66C2]/10 text-[#0A66C2] dark:text-[#38BDF8] flex items-center justify-center font-bold">
@@ -732,7 +668,6 @@
                 <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors"></i>
               </a>
 
-              <!-- GitHub Profile -->
               <a href="https://github.com/hamzads077-ds" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3.5 rounded-lg border border-slate-200/90 dark:border-slate-800 hover:border-slate-400 dark:hover:border-slate-600 hover:bg-slate-50/70 dark:hover:bg-slate-800/60 transition-all duration-200 group">
                 <div class="flex items-center gap-3">
                   <div class="w-9 h-9 rounded-lg bg-slate-900 dark:bg-slate-800 text-white flex items-center justify-center">
@@ -749,7 +684,6 @@
 
           </div>
 
-          <!-- Contact Right: Functional Styled Contact Form UI -->
           <div class="lg:col-span-7" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
             <div class="bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 rounded-xl p-6 sm:p-8 shadow-subtle transition-colors">
               <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Send a Message</h3>
@@ -757,10 +691,8 @@
                 Fill in the details below to initiate contact or discuss internship opportunities.
               </p>
 
-              <!-- Contact Form -->
-              <form id="portfolio-contact-form" class="space-y-4" onsubmit="handleContactSubmit(event)">
+              <form id="portfolio-contact-form" class="space-y-4" action="https://formspree.io/f/xeaobvbd" method="POST" onsubmit="handleContactSubmit(event)">
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <!-- Name Input -->
                   <div>
                     <label for="contact-name" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
                       Your Name <span class="text-red-500">*</span>
@@ -775,7 +707,6 @@
                     />
                   </div>
 
-                  <!-- Email Input -->
                   <div>
                     <label for="contact-email" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
                       Email Address <span class="text-red-500">*</span>
@@ -791,7 +722,6 @@
                   </div>
                 </div>
 
-                <!-- Subject Input -->
                 <div>
                   <label for="contact-subject" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
                     Subject / Discussion Topic
@@ -805,7 +735,6 @@
                   />
                 </div>
 
-                <!-- Message Input -->
                 <div>
                   <label for="contact-message" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
                     Message <span class="text-red-500">*</span>
@@ -820,7 +749,6 @@
                   ></textarea>
                 </div>
 
-                <!-- Submit Button -->
                 <div class="pt-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                   <button 
                     type="submit" 
@@ -836,7 +764,6 @@
                   </span>
                 </div>
 
-                <!-- Form Feedback Status Banner -->
                 <div id="form-feedback" class="hidden mt-4 p-4 rounded-lg text-xs leading-relaxed transition-all"></div>
               </form>
 
@@ -850,12 +777,10 @@
 
   </main>
 
-  <!-- ==================== 7. FOOTER ==================== -->
   <footer class="bg-white dark:bg-[#0B0F19] border-t border-slate-200/90 dark:border-slate-800/90 py-10 transition-colors duration-200">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row items-center justify-between gap-6">
         
-        <!-- Left: Branding & Tagline -->
         <div class="flex items-center gap-3">
           <span class="w-7 h-7 rounded-md bg-indigo-600 text-white flex items-center justify-center text-xs font-mono font-bold">
             HS
@@ -866,7 +791,6 @@
           </div>
         </div>
 
-        <!-- Center: Quick Links -->
         <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-600 dark:text-slate-400 font-medium">
           <a href="#home" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Home</a>
           <a href="#about" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About</a>
@@ -875,7 +799,6 @@
           <a href="#contact" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a>
         </div>
 
-        <!-- Right: Social Icons & Back to Top -->
         <div class="flex items-center gap-3">
           <a href="https://github.com/hamzads077-ds" target="_blank" rel="noopener noreferrer" class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm transition-colors" title="GitHub" aria-label="GitHub">
             <i class="fa-brands fa-github"></i>
@@ -899,12 +822,9 @@
     </div>
   </footer>
 
-  <!-- ==================== SCRIPTS & INTERACTION ==================== -->
-  <!-- AOS Script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   
   <script>
-    // Initialize AOS (Animate On Scroll)
     document.addEventListener('DOMContentLoaded', () => {
       AOS.init({
         duration: 650,
@@ -913,17 +833,14 @@
         offset: 60
       });
 
-      // Set copyright year
       const yearEl = document.getElementById('current-year');
       if (yearEl) {
         yearEl.textContent = new Date().getFullYear();
       }
 
-      // Initialize theme toggle icon state
       initThemeToggle();
     });
 
-    // Dark Mode Theme Controller
     function initThemeToggle() {
       const themeToggleBtn = document.getElementById('theme-toggle-btn');
       const themeToggleIcon = document.getElementById('theme-toggle-icon');
@@ -952,7 +869,6 @@
         updateThemeIcon();
       }
 
-      // Listen for system color scheme preference changes
       window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
         if (!localStorage.getItem('theme')) {
           if (e.matches) {
@@ -965,7 +881,6 @@
       });
     }
 
-    // Mobile Navigation Drawer Toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const menuIcon = document.getElementById('menu-icon');
@@ -986,7 +901,6 @@
         }
       });
 
-      // Close mobile drawer on link click
       document.querySelectorAll('.mobile-nav-link').forEach(link => {
         link.addEventListener('click', () => {
           mobileMenu.classList.add('hidden');
@@ -997,7 +911,6 @@
       });
     }
 
-    // Active Navigation Highlight on Scroll
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('header nav a');
 
@@ -1021,53 +934,7 @@
       });
     });
 
-    // Contact Form Handler
     function handleContactSubmit(event) {
-      event.preventDefault();
-      
-      const form = document.getElementById('portfolio-contact-form');
-      const submitBtn = document.getElementById('submit-btn');
-      const submitBtnText = document.getElementById('submit-btn-text');
-      const feedback = document.getElementById('form-feedback');
-
-      const name = document.getElementById('contact-name').value.trim();
-      const email = document.getElementById('contact-email').value.trim();
-      const subject = document.getElementById('contact-subject').value.trim() || 'Portfolio Inquiry';
-      const message = document.getElementById('contact-message').value.trim();
-
-      if (!name || !email || !message) {
-        feedback.className = 'mt-4 p-4 rounded-lg text-xs leading-relaxed bg-red-50 dark:bg-red-950/50 border border-red-200 dark:border-red-900/60 text-red-700 dark:text-red-300 block';
-        feedback.innerHTML = '<strong>Incomplete form:</strong> Please fill in all required fields (Name, Email, Message).';
-        return;
-      }
-
-      // Loading state
-      submitBtn.disabled = true;
-      submitBtnText.textContent = 'Processing...';
-
-      setTimeout(() => {
-        submitBtn.disabled = false;
-        submitBtnText.textContent = 'Submit Message';
-        form.reset();
-
-        // Construct friendly WhatsApp redirect option & confirmation
-        const encodedMsg = encodeURIComponent(`Hi Hamza, my name is ${name} (${email}). Subject: ${subject}. Message: ${message}`);
-        const waLink = `https://wa.me/923180564651?text=${encodedMsg}`;
-
-        feedback.className = 'mt-4 p-4 rounded-lg text-xs leading-relaxed bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-300 block';
-        feedback.innerHTML = `
-          <div class="flex items-start gap-2.5">
-            <i class="fa-solid fa-circle-check text-emerald-600 dark:text-emerald-400 mt-0.5 text-sm"></i>
-            <div>
-              <p class="font-semibold mb-1">Thank you, ${name}!</p>
-              <p class="mb-2 text-slate-600 dark:text-slate-300">Your message has been formatted. For the fastest response, you can also forward this note directly via WhatsApp:</p>
-              <a href="${waLink}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 font-semibold text-emerald-700 dark:text-emerald-400 hover:text-emerald-800 dark:hover:text-emerald-300 underline">
-                <i class="fa-brands fa-whatsapp text-sm"></i> Send formatted text via WhatsApp &rarr;
-              </a>
-            </div>
-          </div>
-        `;
-      }, 500);
     }
   </script>
 </body>
