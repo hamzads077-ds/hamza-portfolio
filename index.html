@@ -1,1074 +1,941 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hamza Shah | Data Science Portfolio</title>
-  <meta name="description" content="Portfolio of Muhammad Hamza Shah, BS Statistical Data Science student at International Islamic University Islamabad (IIUI), specializing in Python, SQL, statistical modeling, and analytical insights." />
-  <meta name="author" content="Muhammad Hamza Shah" />
-  <meta property="og:title" content="Muhammad Hamza Shah | Statistical Data Science Portfolio" />
-  <meta property="og:description" content="BS Statistical Data Science student at IIUI specializing in Python, SQL, and statistical modeling." />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://github.com/hamzads077-ds" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hamza Shah | Data Science Portfolio</title>
+  <meta name="description" content="Portfolio of Muhammad Hamza Shah, BS Statistical Data Science student at International Islamic University Islamabad (IIUI), specializing in Python, SQL, statistical modeling, and analytical insights." />
+  <meta name="author" content="Muhammad Hamza Shah" />
+  <meta property="og:title" content="Muhammad Hamza Shah | Statistical Data Science Portfolio" />
+  <meta property="og:description" content="BS Statistical Data Science student at IIUI specializing in Python, SQL, and statistical modeling." />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://github.com/hamzads077-ds" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Theme Initialization (Prevents FOUC) -->
-  <script>
-    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  </script>
+  <script>
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
 
-  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- Font Awesome 6 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- AOS (Animate On Scroll) -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              indigo: '#4F46E5',
-              'indigo-hover': '#4338CA',
-              teal: '#0EA5E9',
-              'teal-hover': '#0284C7',
-              dark: '#0F172A',
-            },
-            surface: {
-              bg: '#F8FAFC',
-              card: '#FFFFFF',
-              border: '#E2E8F0',
-              muted: '#64748B'
-            }
-          },
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace']
-          },
-          boxShadow: {
-            subtle: '0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05)',
-            card: '0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -2px rgba(0, 0, 0, 0.04)',
-            hover: '0 12px 24px -4px rgba(79, 70, 229, 0.08), 0 4px 8px -2px rgba(15, 23, 42, 0.04)'
-          }
-        }
-      }
-    }
-  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              indigo: '#4F46E5',
+              'indigo-hover': '#4338CA',
+              teal: '#0EA5E9',
+              'teal-hover': '#0284C7',
+              dark: '#0F172A',
+            },
+            surface: {
+              bg: '#F8FAFC',
+              card: '#FFFFFF',
+              border: '#E2E8F0',
+              muted: '#64748B'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          },
+          boxShadow: {
+            subtle: '0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05)',
+            card: '0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -2px rgba(0, 0, 0, 0.04)',
+            hover: '0 12px 24px -4px rgba(79, 70, 229, 0.08), 0 4px 8px -2px rgba(15, 23, 42, 0.04)'
+          }
+        }
+      }
+    }
+  </script>
 
-  <style>
-    /* Base Reset & Custom Accents */
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
 
-    /* Glassmorphism Navigation */
-    .glass-nav {
-      background: rgba(255, 255, 255, 0.88);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-    }
-    html.dark .glass-nav {
-      background: rgba(11, 15, 25, 0.88);
-      border-color: rgba(30, 41, 59, 0.8);
-    }
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    html.dark .glass-nav {
+      background: rgba(11, 15, 25, 0.88);
+      border-color: rgba(30, 41, 59, 0.8);
+    }
 
-    /* Subtle Card Hover Elevation */
-    .feature-card {
-      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
-    }
-    .feature-card:hover {
-      transform: translateY(-4px);
-      border-color: #CBD5E1;
-      box-shadow: 0 16px 30px -6px rgba(79, 70, 229, 0.09), 0 6px 12px -3px rgba(15, 23, 42, 0.04);
-    }
-    html.dark .feature-card:hover {
-      border-color: #334155;
-      box-shadow: 0 16px 30px -6px rgba(0, 0, 0, 0.4), 0 6px 12px -3px rgba(0, 0, 0, 0.3);
-    }
+    .feature-card {
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+    }
+    .feature-card:hover {
+      transform: translateY(-4px);
+      border-color: #CBD5E1;
+      box-shadow: 0 16px 30px -6px rgba(79, 70, 229, 0.09), 0 6px 12px -3px rgba(15, 23, 42, 0.04);
+    }
+    html.dark .feature-card:hover {
+      border-color: #334155;
+      box-shadow: 0 16px 30px -6px rgba(0, 0, 0, 0.4), 0 6px 12px -3px rgba(0, 0, 0, 0.3);
+    }
 
-    /* Dot Background Texture for Hero */
-    .dot-pattern {
-      background-image: radial-gradient(#CBD5E1 1px, transparent 1px);
-      background-size: 24px 24px;
-    }
-    html.dark .dot-pattern {
-      background-image: radial-gradient(#1E293B 1px, transparent 1px);
-    }
+    .dot-pattern {
+      background-image: radial-gradient(#CBD5E1 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+    html.dark .dot-pattern {
+      background-image: radial-gradient(#1E293B 1px, transparent 1px);
+    }
 
-    /* Focus Visible Accessibility */
-    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
-      outline: 2px solid #4F46E5;
-      outline-offset: 2px;
-    }
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+      outline: 2px solid #4F46E5;
+      outline-offset: 2px;
+    }
 
-    /* Text Wrap Balance */
-    .text-balance {
-      text-wrap: balance;
-    }
-  </style>
+    .text-balance {
+      text-wrap: balance;
+    }
+  </style>
 </head>
 <body class="bg-[#F8FAFC] dark:bg-[#0B0F19] text-slate-900 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-200 selection:bg-indigo-500/15 selection:text-indigo-900 dark:selection:bg-indigo-500/30 dark:selection:text-indigo-200">
 
-  <!-- ==================== 1. STICKY GLASSMORPHISM HEADER ==================== -->
-  <header id="main-header" class="sticky top-0 z-50 w-full glass-nav border-b border-slate-200/80 dark:border-slate-800/80 transition-all duration-200">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      
-      <!-- Zone 1: Single text element Brand Zone -->
-      <a href="#home" class="group flex items-center gap-2.5 text-slate-900 dark:text-white font-bold text-base tracking-tight hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
-        <span class="w-8 h-8 rounded-lg bg-indigo-600 text-white flex items-center justify-center text-xs font-mono font-semibold shadow-sm group-hover:bg-indigo-700 transition-colors">
-          HS
-        </span>
-        <span class="tracking-tight text-slate-900 dark:text-white font-bold">Muhammad Hamza Shah</span>
-      </a>
-
-      <!-- Zone 2: Navigation Links (Desktop) -->
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600 dark:text-slate-300">
-        <a href="#home" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors py-1 relative hover:after:w-full after:w-0 after:h-0.5 after:bg-indigo-600 after:absolute after:bottom-0 after:left-0 after:transition-all">Home</a>
-        <a href="#about" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors py-1 relative hover:after:w-full after:w-0 after:h-0.5 after:bg-indigo-600 after:absolute after:bottom-0 after:left-0 after:transition-all">About</a>
-        <a href="#skills" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors py-1 relative hover:after:w-full after:w-0 after:h-0.5 after:bg-indigo-600 after:absolute after:bottom-0 after:left-0 after:transition-all">Skills</a>
-        <a href="#education" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors py-1 relative hover:after:w-full after:w-0 after:h-0.5 after:bg-indigo-600 after:absolute after:bottom-0 after:left-0 after:transition-all">Education</a>
-        <a href="#contact" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors py-1 relative hover:after:w-full after:w-0 after:h-0.5 after:bg-indigo-600 after:absolute after:bottom-0 after:left-0 after:transition-all">Contact</a>
-      </nav>
-
-      <!-- Zone 3: Controls, Icons & Dark Mode Toggle -->
-      <div class="flex items-center gap-2.5 sm:gap-3">
-        <!-- Dark Mode Toggle Button -->
-        <button 
-          id="theme-toggle-btn" 
-          type="button" 
-          class="w-9 h-9 rounded-lg border border-slate-200/90 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:border-slate-300 dark:hover:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800/80 flex items-center justify-center transition-all duration-200 cursor-pointer" 
-          aria-label="Toggle dark mode" 
-          title="Toggle dark / light mode"
-        >
-          <i id="theme-toggle-icon" class="fa-solid fa-moon text-sm"></i>
-        </button>
-
-        <!-- Direct GitHub -->
-        <a href="https://github.com/hamzads077-ds" target="_blank" rel="noopener noreferrer" aria-label="Muhammad Hamza Shah GitHub Profile" class="w-9 h-9 rounded-lg border border-slate-200/90 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:border-slate-300 dark:hover:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800/80 flex items-center justify-center transition-all duration-200" title="GitHub">
-          <i class="fa-brands fa-github text-base"></i>
-        </a>
-
-        <!-- Direct LinkedIn -->
-        <a href="https://www.linkedin.com/in/hamzads077" target="_blank" rel="noopener noreferrer" aria-label="Muhammad Hamza Shah LinkedIn Profile" class="w-9 h-9 rounded-lg border border-slate-200/90 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-[#0A66C2] dark:hover:text-[#38BDF8] hover:border-slate-300 dark:hover:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800/80 flex items-center justify-center transition-all duration-200" title="LinkedIn">
-          <i class="fa-brands fa-linkedin-in text-base"></i>
-        </a>
-
-        <!-- Direct WhatsApp -->
-        <a href="https://wa.me/923180564651" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" class="w-9 h-9 rounded-lg border border-slate-200/90 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-[#25D366] hover:border-emerald-200 dark:hover:border-emerald-800/80 hover:bg-emerald-50/50 dark:hover:bg-emerald-950/40 flex items-center justify-center transition-all duration-200" title="WhatsApp: +923180564651">
-          <i class="fa-brands fa-whatsapp text-lg"></i>
-        </a>
-
-        <!-- Mobile Drawer Toggle -->
-        <button id="mobile-menu-btn" type="button" class="md:hidden w-9 h-9 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center transition-colors" aria-label="Toggle navigation menu" aria-expanded="false">
-          <i id="menu-icon" class="fa-solid fa-bars text-sm"></i>
-        </button>
-      </div>
-
-    </div>
-
-    <!-- Mobile Drawer Overlay & Panel -->
-    <div id="mobile-menu" class="hidden md:hidden border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0E1526] px-4 pt-3 pb-6 space-y-3 shadow-lg">
-      <div class="flex flex-col space-y-2 text-sm font-medium text-slate-700 dark:text-slate-200">
-        <a href="#home" class="mobile-nav-link px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/60 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Home</a>
-        <a href="#about" class="mobile-nav-link px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/60 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About</a>
-        <a href="#skills" class="mobile-nav-link px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/60 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Skills</a>
-        <a href="#education" class="mobile-nav-link px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/60 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Education</a>
-        <a href="#contact" class="mobile-nav-link px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/60 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a>
-      </div>
-      <div class="pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
-        <span>Direct Contact:</span>
-        <a href="https://wa.me/923180564651" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-600 dark:text-emerald-400 hover:underline">
-          <i class="fa-brands fa-whatsapp mr-1"></i>+92 318 0564651
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <!-- ==================== MAIN CONTENT ==================== -->
-  <main class="flex-grow">
-
-    <!-- ==================== 2. HERO SECTION ==================== -->
-    <section id="home" class="relative pt-16 pb-20 md:pt-24 md:pb-28 overflow-hidden dot-pattern">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
-        <div class="max-w-3xl" data-aos="fade-up" data-aos-duration="700">
-          
-          <!-- Status Indicator -->
-          <div class="inline-flex items-center gap-2 mb-6 text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-300 bg-white/90 dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 py-1.5 px-3.5 rounded-full shadow-subtle">
-            <span class="relative flex h-2.5 w-2.5">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-            </span>
-            <span>Available for Data Science &amp; Analytics Internships</span>
-          </div>
-
-          <!-- Headline -->
-          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold text-slate-900 dark:text-white tracking-tight leading-[1.15] text-balance mb-6">
-            Bridging Statistical Theory with <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-indigo-700 to-sky-500 dark:from-indigo-400 dark:via-indigo-300 dark:to-sky-400">Python &amp; SQL</span> Development
-          </h1>
-
-          <!-- Subheadline -->
-          <p class="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mb-8">
-            BS Statistical Data Science Student at International Islamic University Islamabad (IIUI), turning complex data into actionable analytical insights through quantitative rigor and reproducible code.
-          </p>
-
-          <!-- Action Buttons -->
-          <div class="flex flex-wrap items-center gap-4 pt-1">
-            <!-- Connect on WhatsApp -->
-            <a href="https://wa.me/923180564651" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-5 py-3 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 rounded-lg shadow-sm hover:shadow transition-all duration-200 whitespace-nowrap">
-              <i class="fa-brands fa-whatsapp text-lg text-emerald-300"></i>
-              <span>Connect on WhatsApp</span>
-            </a>
-
-            <!-- View GitHub -->
-            <a href="https://github.com/hamzads077-ds" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 active:bg-slate-100 dark:active:bg-slate-800 rounded-lg shadow-subtle transition-all duration-200 whitespace-nowrap">
-              <i class="fa-brands fa-github text-base text-slate-700 dark:text-slate-200"></i>
-              <span>View GitHub</span>
-            </a>
-
-            <!-- View LinkedIn Secondary -->
-            <a href="https://www.linkedin.com/in/hamzads077" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-3 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-white/60 dark:hover:bg-slate-800/60 rounded-lg transition-colors whitespace-nowrap">
-              <i class="fa-brands fa-linkedin text-[#0A66C2] dark:text-[#38BDF8] text-base"></i>
-              <span>LinkedIn Profile</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-slate-400 dark:text-slate-500"></i>
-            </a>
-          </div>
-
-          <!-- Academic & Tooling Signature Bar -->
-          <div class="mt-12 pt-8 border-t border-slate-200/90 dark:border-slate-800 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs text-slate-500 dark:text-slate-400 font-mono">
-            <div>
-              <span class="block text-slate-400 dark:text-slate-500 font-sans text-[11px] uppercase tracking-wider mb-1">Institution</span>
-              <span class="text-slate-800 dark:text-slate-200 font-semibold font-sans">IIUI Islamabad</span>
-            </div>
-            <div>
-              <span class="block text-slate-400 dark:text-slate-500 font-sans text-[11px] uppercase tracking-wider mb-1">Degree Major</span>
-              <span class="text-slate-800 dark:text-slate-200 font-semibold font-sans">Statistical Data Science</span>
-            </div>
-            <div>
-              <span class="block text-slate-400 dark:text-slate-500 font-sans text-[11px] uppercase tracking-wider mb-1">Core Stack</span>
-              <span class="text-slate-800 dark:text-slate-200 font-semibold font-sans">Python · SQL</span>
-            </div>
-            <div>
-              <span class="block text-slate-400 dark:text-slate-500 font-sans text-[11px] uppercase tracking-wider mb-1">Environment</span>
-              <span class="text-slate-800 dark:text-slate-200 font-semibold font-sans">VS Code · Jupyter</span>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== 3. ABOUT ME SECTION ==================== -->
-    <section id="about" class="py-20 bg-white dark:bg-[#0E1526] border-y border-slate-200/80 dark:border-slate-800/80 transition-colors duration-200">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <!-- Section Header -->
-        <div class="max-w-2xl mb-12" data-aos="fade-up" data-aos-duration="600">
-          <p class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-2 font-mono">01. Background &amp; Philosophy</p>
-          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white tracking-tight">Analytical Mindset Rooted in Statistical Foundations</h2>
-        </div>
-
-        <!-- 2-Column / Structured Card Layout -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
-          <!-- Narrative Left Column -->
-          <div class="lg:col-span-7 space-y-5 text-slate-600 dark:text-slate-300 text-base leading-relaxed" data-aos="fade-up" data-aos-duration="650">
-            <div class="bg-[#F8FAFC] dark:bg-[#131B2E] border border-slate-200/90 dark:border-slate-800 rounded-xl p-6 sm:p-7 shadow-subtle transition-colors">
-              <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
-                <i class="fa-solid fa-chart-line text-indigo-600 dark:text-indigo-400 text-sm"></i>
-                From Mathematical Foundations to Code Execution
-              </h3>
-              <p class="mb-4">
-                I am an undergraduate student in <strong>Statistical Data Science at International Islamic University Islamabad (IIUI)</strong>. My education places statistical rigor at the core of data computation—ensuring every metric, hypothesis, and regression model is mathematically sound rather than just an automated black box.
-              </p>
-              <p>
-                My work centers around <strong>exploratory data analysis (EDA)</strong>, data manipulation, and building structured database queries with <strong>Python and SQL</strong>. Whether diagnosing variance in sample distributions, cleaning noisy real-world datasets, or isolating causal correlations, I apply statistical principles to extract genuine clarity.
-              </p>
-            </div>
-
-            <!-- Analytical Pillars -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
-              <div class="p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0F172A] shadow-subtle transition-colors">
-                <div class="w-8 h-8 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-3">
-                  <i class="fa-solid fa-square-root-variable text-sm"></i>
-                </div>
-                <h4 class="text-sm font-semibold text-slate-900 dark:text-white mb-1.5">Hypothesis Testing</h4>
-                <p class="text-xs text-slate-500 dark:text-slate-400 leading-normal">
-                  Evaluating statistical significance, p-values, confidence intervals, and parametric vs. non-parametric assumptions.
-                </p>
-              </div>
-
-              <div class="p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0F172A] shadow-subtle transition-colors">
-                <div class="w-8 h-8 rounded-lg bg-sky-50 dark:bg-sky-950/60 text-sky-600 dark:text-sky-400 flex items-center justify-center mb-3">
-                  <i class="fa-solid fa-database text-sm"></i>
-                </div>
-                <h4 class="text-sm font-semibold text-slate-900 dark:text-white mb-1.5">Relational Querying</h4>
-                <p class="text-xs text-slate-500 dark:text-slate-400 leading-normal">
-                  Crafting clean, optimized SQL queries with multi-table joins, subqueries, group aggregations, and data filtering.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Structured Right Column: Fast Facts & Core Highlights -->
-          <div class="lg:col-span-5 space-y-4" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
-            
-            <div class="bg-gradient-to-br from-slate-900 to-indigo-950 text-white rounded-xl p-6 sm:p-7 shadow-card border border-slate-800/80 dark:border-slate-700/60">
-              <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-4">
-                <span class="text-xs font-mono tracking-wider text-slate-400 uppercase">Profile Snapshot</span>
-                <span class="inline-flex items-center gap-1.5 text-xs text-emerald-400">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                  Active Student
-                </span>
-              </div>
-
-              <div class="space-y-4 text-sm">
-                <div>
-                  <span class="text-xs text-slate-400 block mb-0.5">Full Name</span>
-                  <span class="font-semibold text-white">Muhammad Hamza Shah</span>
-                </div>
-                <div>
-                  <span class="text-xs text-slate-400 block mb-0.5">Academic Program</span>
-                  <span class="font-medium text-slate-200">BS Statistical Data Science</span>
-                </div>
-                <div>
-                  <span class="text-xs text-slate-400 block mb-0.5">University</span>
-                  <span class="font-medium text-slate-200">International Islamic University Islamabad (IIUI)</span>
-                </div>
-                <div>
-                  <span class="text-xs text-slate-400 block mb-0.5">Primary Languages</span>
-                  <span class="font-mono text-xs text-indigo-300">Python · SQL</span>
-                </div>
-                <div>
-                  <span class="text-xs text-slate-400 block mb-0.5">Direct WhatsApp</span>
-                  <a href="https://wa.me/923180564651" target="_blank" rel="noopener noreferrer" class="font-mono text-xs text-emerald-300 hover:text-emerald-200 underline decoration-dotted">
-                    +92 318 0564651
-                  </a>
-                </div>
-              </div>
-
-              <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
-                <span>Location: Islamabad, Pakistan</span>
-                <a href="#contact" class="text-indigo-300 hover:text-white transition-colors font-medium">Get in touch &rarr;</a>
-              </div>
-            </div>
-
-            <!-- Research / Analytics Approach Card -->
-            <div class="bg-white dark:bg-[#131B2E] border border-slate-200 dark:border-slate-800 rounded-xl p-5 shadow-subtle transition-colors">
-              <h4 class="text-xs font-semibold text-slate-900 dark:text-white uppercase tracking-wider mb-2 font-mono">Core Focus</h4>
-              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                Combining rigorous statistical methodologies (inference, regression modeling, probability distributions) with modern data engineering tooling for end-to-end analytical clarity.
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== 4. CORE SKILLS & TECH STACK SECTION ==================== -->
-    <section id="skills" class="py-20 bg-[#F8FAFC] dark:bg-[#0B0F19] transition-colors duration-200">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <!-- Section Header -->
-        <div class="max-w-2xl mb-14" data-aos="fade-up" data-aos-duration="600">
-          <p class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-2 font-mono">02. Capabilities &amp; Tooling</p>
-          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white tracking-tight">Core Skills &amp; Tech Stack</h2>
-          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-2">
-            Balanced foundation across programming languages, mathematical &amp; statistical analytics, and modern developer environments.
-          </p>
-        </div>
-<!-- Direct Email Button -->
-<a href="mailto:your-email@gmail.com" class="flex items-center justify-between p-3.5 rounded-lg border border-slate-200/90 dark:border-slate-800 hover:border-indigo-300 dark:hover:border-indigo-700 hover:bg-indigo-50/30 dark:hover:bg-slate-800/60 transition-all duration-200 group">
-  <div class="flex items-center gap-3">
-    <div class="w-9 h-9 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold">
-      <i class="fa-regular fa-envelope text-base"></i>
-    </div>
-    <div>
-      <span class="text-sm font-semibold text-slate-900 dark:text-slate-100 block group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Direct Email</span>
-      <span class="text-xs text-slate-500 dark:text-slate-400 font-mono">hamza.ds.077@gmail.com</span>
-    </div>
-  </div>
-  <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors"></i>
-</a>
-        <!-- 3 Category Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-          <!-- Category 1: Languages -->
-          <div class="feature-card bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-subtle flex flex-col justify-between" data-aos="fade-up" data-aos-duration="650">
-            <div>
-              <div class="flex items-center justify-between mb-5">
-                <div class="w-10 h-10 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-100/60 dark:border-indigo-900/50 text-indigo-600 dark:text-indigo-400 flex items-center justify-center">
-                  <i class="fa-solid fa-code text-base"></i>
-                </div>
-                <span class="text-xs font-mono font-medium text-slate-400 dark:text-slate-500">01 / Core Languages</span>
-              </div>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Languages</h3>
-              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-6 leading-relaxed">
-                Scripting, data transformation pipelines, and relational database queries.
-              </p>
-
-              <div class="space-y-4">
-                <!-- Python -->
-                <div class="p-3.5 rounded-lg bg-slate-50/70 dark:bg-[#1E293B]/60 border border-slate-200/80 dark:border-slate-700/60">
-                  <div class="flex items-center justify-between mb-1.5">
-                    <span class="font-semibold text-sm text-slate-900 dark:text-slate-100 flex items-center gap-2">
-                      <i class="fa-brands fa-python text-indigo-600 dark:text-indigo-400"></i> Python
-                    </span>
-                    <span class="text-xs font-mono text-slate-500 dark:text-slate-400">Analytics &amp; Modeling</span>
-                  </div>
-                  <p class="text-xs text-slate-600 dark:text-slate-300 leading-normal">
-                    Exploratory data analysis, statistical scripting, data structures, and algorithmic logic.
-                  </p>
-                </div>
-
-                <!-- SQL -->
-                <div class="p-3.5 rounded-lg bg-slate-50/70 dark:bg-[#1E293B]/60 border border-slate-200/80 dark:border-slate-700/60">
-                  <div class="flex items-center justify-between mb-1.5">
-                    <span class="font-semibold text-sm text-slate-900 dark:text-slate-100 flex items-center gap-2">
-                      <i class="fa-solid fa-database text-sky-600 dark:text-sky-400"></i> SQL
-                    </span>
-                    <span class="text-xs font-mono text-slate-500 dark:text-slate-400">Querying &amp; Schemas</span>
-                  </div>
-                  <p class="text-xs text-slate-600 dark:text-slate-300 leading-normal">
-                    Complex joins, grouping, aggregations, window functions, and schema structuring.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center gap-2 text-xs text-slate-400 dark:text-slate-500">
-              <i class="fa-solid fa-check text-indigo-600 dark:text-indigo-400 text-[10px]"></i>
-              <span>Validated in academic projects &amp; exercises</span>
-            </div>
-          </div>
-
-          <!-- Category 2: Statistical & Analytics -->
-          <div class="feature-card bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-subtle flex flex-col justify-between" data-aos="fade-up" data-aos-duration="650" data-aos-delay="100">
-            <div>
-              <div class="flex items-center justify-between mb-5">
-                <div class="w-10 h-10 rounded-lg bg-sky-50 dark:bg-sky-950/60 border border-sky-100/60 dark:border-sky-900/50 text-sky-600 dark:text-sky-400 flex items-center justify-center">
-                  <i class="fa-solid fa-chart-pie text-base"></i>
-                </div>
-                <span class="text-xs font-mono font-medium text-slate-400 dark:text-slate-500">02 / Quantitative Logic</span>
-              </div>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Statistical &amp; Analytics</h3>
-              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-6 leading-relaxed">
-                Methodological rigor for examining datasets, evaluating error, and extracting patterns.
-              </p>
-
-              <div class="space-y-4">
-                <!-- Descriptive & Inferential -->
-                <div class="p-3.5 rounded-lg bg-slate-50/70 dark:bg-[#1E293B]/60 border border-slate-200/80 dark:border-slate-700/60">
-                  <div class="font-semibold text-sm text-slate-900 dark:text-slate-100 mb-1 flex items-center gap-2">
-                    <i class="fa-solid fa-calculator text-indigo-500 dark:text-indigo-400"></i> Statistics &amp; Probability
-                  </div>
-                  <p class="text-xs text-slate-600 dark:text-slate-300 leading-normal">
-                    Descriptive metrics, probability distributions, central limit theorem, and confidence intervals.
-                  </p>
-                </div>
-
-                <!-- Statistical Modeling -->
-                <div class="p-3.5 rounded-lg bg-slate-50/70 dark:bg-[#1E293B]/60 border border-slate-200/80 dark:border-slate-700/60">
-                  <div class="font-semibold text-sm text-slate-900 dark:text-slate-100 mb-1 flex items-center gap-2">
-                    <i class="fa-solid fa-bezier-curve text-sky-500 dark:text-sky-400"></i> Statistical Modeling
-                  </div>
-                  <p class="text-xs text-slate-600 dark:text-slate-300 leading-normal">
-                    Linear &amp; multivariate regression, residual diagnostics, correlation analysis, and model fitting.
-                  </p>
-                </div>
-
-                <!-- Data Wrangling & Visualization -->
-                <div class="p-3.5 rounded-lg bg-slate-50/70 dark:bg-[#1E293B]/60 border border-slate-200/80 dark:border-slate-700/60">
-                  <div class="font-semibold text-sm text-slate-900 dark:text-slate-100 mb-1 flex items-center gap-2">
-                    <i class="fa-solid fa-filter text-indigo-500 dark:text-indigo-400"></i> Wrangling &amp; Visualization
-                  </div>
-                  <p class="text-xs text-slate-600 dark:text-slate-300 leading-normal">
-                    Handling missing values, outlier detection, data normalization, and communicative charts.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center gap-2 text-xs text-slate-400 dark:text-slate-500">
-              <i class="fa-solid fa-check text-sky-600 dark:text-sky-400 text-[10px]"></i>
-              <span>Grounded in mathematical proof &amp; verification</span>
-            </div>
-          </div>
-
-          <!-- Category 3: Developer Tools -->
-          <div class="feature-card bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-subtle flex flex-col justify-between" data-aos="fade-up" data-aos-duration="650" data-aos-delay="200">
-            <div>
-              <div class="flex items-center justify-between mb-5">
-                <div class="w-10 h-10 rounded-lg bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-100/60 dark:border-emerald-900/50 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
-                  <i class="fa-solid fa-terminal text-base"></i>
-                </div>
-                <span class="text-xs font-mono font-medium text-slate-400 dark:text-slate-500">03 / Tooling &amp; Workflow</span>
-              </div>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Developer Tools</h3>
-              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-6 leading-relaxed">
-                Reproducible execution, interactive notebooks, and version-controlled collaboration.
-              </p>
-
-              <div class="space-y-4">
-                <!-- VS Code -->
-                <div class="p-3.5 rounded-lg bg-slate-50/70 dark:bg-[#1E293B]/60 border border-slate-200/80 dark:border-slate-700/60">
-                  <div class="flex items-center justify-between mb-1.5">
-                    <span class="font-semibold text-sm text-slate-900 dark:text-slate-100 flex items-center gap-2">
-                      <i class="fa-solid fa-laptop-code text-blue-500 dark:text-blue-400"></i> Visual Studio Code
-                    </span>
-                    <span class="text-xs font-mono text-slate-500 dark:text-slate-400">IDE</span>
-                  </div>
-                  <p class="text-xs text-slate-600 dark:text-slate-300 leading-normal">
-                    Primary development environment with Python linting, debugging, and workspace management.
-                  </p>
-                </div>
-
-                <!-- Jupyter Notebooks -->
-                <div class="p-3.5 rounded-lg bg-slate-50/70 dark:bg-[#1E293B]/60 border border-slate-200/80 dark:border-slate-700/60">
-                  <div class="flex items-center justify-between mb-1.5">
-                    <span class="font-semibold text-sm text-slate-900 dark:text-slate-100 flex items-center gap-2">
-                      <i class="fa-solid fa-book-open text-amber-500 dark:text-amber-400"></i> Jupyter Notebooks
-                    </span>
-                    <span class="text-xs font-mono text-slate-500 dark:text-slate-400">Interactive EDA</span>
-                  </div>
-                  <p class="text-xs text-slate-600 dark:text-slate-300 leading-normal">
-                    Cell-by-cell data experimentation, narrative reporting, and visualization checkpoints.
-                  </p>
-                </div>
-
-                <!-- Git & GitHub -->
-                <div class="p-3.5 rounded-lg bg-slate-50/70 dark:bg-[#1E293B]/60 border border-slate-200/80 dark:border-slate-700/60">
-                  <div class="flex items-center justify-between mb-1.5">
-                    <span class="font-semibold text-sm text-slate-900 dark:text-slate-100 flex items-center gap-2">
-                      <i class="fa-brands fa-git-alt text-orange-500 dark:text-orange-400"></i> Git &amp; GitHub
-                    </span>
-                    <span class="text-xs font-mono text-slate-500 dark:text-slate-400">Version Control</span>
-                  </div>
-                  <p class="text-xs text-slate-600 dark:text-slate-300 leading-normal">
-                    Commit histories, branching, repository management, and code collaboration.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center gap-2 text-xs text-slate-400 dark:text-slate-500">
-              <i class="fa-solid fa-check text-emerald-600 dark:text-emerald-400 text-[10px]"></i>
-              <span>Active GitHub portfolio maintenance</span>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== 5. EDUCATION SECTION ==================== -->
-    <section id="education" class="py-20 bg-white dark:bg-[#0E1526] border-y border-slate-200/80 dark:border-slate-800/80 transition-colors duration-200">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <!-- Section Header -->
-        <div class="max-w-2xl mb-12" data-aos="fade-up" data-aos-duration="600">
-          <p class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-2 font-mono">03. Academic Journey</p>
-          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white tracking-tight">Formal Education</h2>
-          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-2">
-            Rigorous undergraduate training combining theoretical mathematics and computational statistical science.
-          </p>
-        </div>
-
-        <!-- Professional Timeline Card -->
-        <div class="max-w-4xl" data-aos="fade-up" data-aos-duration="700">
-          <div class="relative pl-6 sm:pl-8 border-l-2 border-indigo-200 dark:border-indigo-900/60">
-            
-            <!-- Timeline Marker -->
-            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-indigo-600 border-4 border-white dark:border-[#0E1526] shadow-sm"></div>
-
-            <!-- Education Box -->
-            <div class="bg-[#F8FAFC] dark:bg-[#131B2E] border border-slate-200 dark:border-slate-800 rounded-xl p-6 sm:p-8 shadow-subtle transition-colors">
-              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
-                <div>
-                  <h3 class="text-xl font-bold text-slate-900 dark:text-white">Bachelor of Science in Statistical Data Science</h3>
-                  <div class="text-sm font-semibold text-indigo-600 dark:text-indigo-400 flex items-center gap-2 mt-1">
-                    <i class="fa-solid fa-building-columns text-xs"></i>
-                    <span>International Islamic University Islamabad (IIUI)</span>
-                  </div>
-                </div>
-                <div class="text-xs font-mono text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 px-3 py-1.5 rounded-md self-start sm:self-auto shadow-subtle">
-                  Islamabad, Pakistan
-                </div>
-              </div>
-
-              <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
-                Enrolled in the comprehensive Statistical Data Science program at IIUI. The curriculum bridges rigorous mathematical probability theory with practical computational implementations in Python and SQL to prepare graduates for analytical problem-solving in data-intensive domains.
-              </p>
-
-              <!-- Highlights Grid (Unboxed, clean typography) -->
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 border-t border-slate-200/90 dark:border-slate-800 text-xs">
-                <div>
-                  <h4 class="font-semibold text-slate-900 dark:text-slate-100 mb-2 flex items-center gap-1.5">
-                    <i class="fa-solid fa-book text-indigo-600 dark:text-indigo-400 text-[11px]"></i> Core Subject Areas
-                  </h4>
-                  <ul class="space-y-1.5 text-slate-600 dark:text-slate-400">
-                    <li class="flex items-center gap-2">
-                      <span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
-                      <span>Statistical Inference &amp; Estimation Theory</span>
-                    </li>
-                    <li class="flex items-center gap-2">
-                      <span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
-                      <span>Probability Distributions &amp; Stochastic Logic</span>
-                    </li>
-                    <li class="flex items-center gap-2">
-                      <span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
-                      <span>Regression Analysis &amp; Experimental Design</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 class="font-semibold text-slate-900 dark:text-slate-100 mb-2 flex items-center gap-1.5">
-                    <i class="fa-solid fa-code-branch text-sky-600 dark:text-sky-400 text-[11px]"></i> Computational Labs
-                  </h4>
-                  <ul class="space-y-1.5 text-slate-600 dark:text-slate-400">
-                    <li class="flex items-center gap-2">
-                      <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
-                      <span>Relational Database Management with SQL</span>
-                    </li>
-                    <li class="flex items-center gap-2">
-                      <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
-                      <span>Python Data Wrangling &amp; Exploratory Analysis</span>
-                    </li>
-                    <li class="flex items-center gap-2">
-                      <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
-                      <span>Notebook Documentation &amp; Version Control</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== 6. DIRECT CONTACT & SOCIAL SECTION ==================== -->
-    <section id="contact" class="py-20 bg-[#F8FAFC] dark:bg-[#0B0F19] transition-colors duration-200">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <!-- Section Header -->
-        <div class="max-w-2xl mb-12" data-aos="fade-up" data-aos-duration="600">
-          <p class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-2 font-mono">04. Get In Touch</p>
-          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white tracking-tight">Direct Contact &amp; Channels</h2>
-          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-2">
-            Interested in data science internships, quantitative collaboration, or research projects? Reach out directly.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
-          <!-- Contact Left: Bold Action Cards & Social Buttons -->
-          <div class="lg:col-span-5 space-y-5" data-aos="fade-up" data-aos-duration="650">
-            
-            <!-- WhatsApp Spotlight Card -->
-            <div class="bg-white dark:bg-[#111827] border-2 border-emerald-500/40 dark:border-emerald-600/40 rounded-xl p-6 sm:p-7 shadow-card relative overflow-hidden transition-colors">
-              <div class="absolute -right-6 -bottom-6 text-emerald-100 dark:text-emerald-950/30 opacity-60 text-9xl pointer-events-none">
-                <i class="fa-brands fa-whatsapp"></i>
-              </div>
-              
-              <div class="relative z-10">
-                <div class="inline-flex items-center gap-2 text-xs font-semibold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 px-2.5 py-1 rounded-md mb-4">
-                  <i class="fa-solid fa-bolt text-[11px]"></i> Fastest Response
-                </div>
-
-                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Chat Directly on WhatsApp</h3>
-                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
-                  Available for instant conversations regarding internships, analytical assignments, and technical queries.
-                </p>
-
-                <!-- Primary Big CTA -->
-                <a href="https://wa.me/923180564651" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-3 px-5 py-3.5 text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 rounded-lg shadow-sm hover:shadow transition-all duration-200">
-                  <i class="fa-brands fa-whatsapp text-xl"></i>
-                  <span>Chat on WhatsApp (+92 318 0564651)</span>
-                </a>
-              </div>
-            </div>
-
-            <!-- Social Links Grid -->
-            <div class="bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-subtle space-y-4 transition-colors">
-              <h4 class="text-xs font-semibold text-slate-900 dark:text-slate-200 uppercase tracking-wider font-mono">Professional Networks</h4>
-              
-              <!-- LinkedIn Profile -->
-              <a href="https://www.linkedin.com/in/hamzads077" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3.5 rounded-lg border border-slate-200/90 dark:border-slate-800 hover:border-blue-300 dark:hover:border-blue-700 hover:bg-blue-50/30 dark:hover:bg-slate-800/60 transition-all duration-200 group">
-                <div class="flex items-center gap-3">
-                  <div class="w-9 h-9 rounded-lg bg-[#0A66C2]/10 text-[#0A66C2] dark:text-[#38BDF8] flex items-center justify-center font-bold">
-                    <i class="fa-brands fa-linkedin-in text-base"></i>
-                  </div>
-                  <div>
-                    <span class="text-sm font-semibold text-slate-900 dark:text-slate-100 block group-hover:text-blue-700 dark:group-hover:text-blue-400 transition-colors">LinkedIn Profile</span>
-                    <span class="text-xs text-slate-500 dark:text-slate-400 font-mono">linkedin.com/in/hamzads077</span>
-                  </div>
-                </div>
-                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors"></i>
-              </a>
-
-              <!-- GitHub Profile -->
-              <a href="https://github.com/hamzads077-ds" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3.5 rounded-lg border border-slate-200/90 dark:border-slate-800 hover:border-slate-400 dark:hover:border-slate-600 hover:bg-slate-50/70 dark:hover:bg-slate-800/60 transition-all duration-200 group">
-                <div class="flex items-center gap-3">
-                  <div class="w-9 h-9 rounded-lg bg-slate-900 dark:bg-slate-800 text-white flex items-center justify-center">
-                    <i class="fa-brands fa-github text-base"></i>
-                  </div>
-                  <div>
-                    <span class="text-sm font-semibold text-slate-900 dark:text-slate-100 block group-hover:text-slate-900 dark:group-hover:text-white transition-colors">GitHub Repository</span>
-                    <span class="text-xs text-slate-500 dark:text-slate-400 font-mono">github.com/hamzads077-ds</span>
-                  </div>
-                </div>
-                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover:text-slate-700 dark:group-hover:text-slate-300 transition-colors"></i>
-              </a>
-            </div>
-
-          </div>
-
-          <!-- Contact Right: Functional Styled Contact Form UI -->
-          <div class="lg:col-span-7" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
-            <div class="bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 rounded-xl p-6 sm:p-8 shadow-subtle transition-colors">
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Send a Message</h3>
-              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-6">
-                Fill in the details below to initiate contact or discuss internship opportunities.
-              </p>
-
-              <!-- Contact Form -->
-              <form id="portfolio-contact-form" class="space-y-4" onsubmit="handleContactSubmit(event)">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <!-- Name Input -->
-                  <div>
-                    <label for="contact-name" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
-                      Your Name <span class="text-red-500">*</span>
-                    </label>
-                    <input 
-                      type="text" 
-                      id="contact-name" 
-                      name="name" 
-                      required 
-                      placeholder="e.g. Alex Henderson" 
-                      class="w-full px-3.5 py-2.5 text-sm bg-slate-50/50 dark:bg-[#1E293B]/60 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:bg-white dark:focus:bg-[#1E293B] focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600 transition-all"
-                    />
-                  </div>
-
-                  <!-- Email Input -->
-                  <div>
-                    <label for="contact-email" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
-                      Email Address <span class="text-red-500">*</span>
-                    </label>
-                    <input 
-                      type="email" 
-                      id="contact-email" 
-                      name="email" 
-                      required 
-                      placeholder="alex@company.com" 
-                      class="w-full px-3.5 py-2.5 text-sm bg-slate-50/50 dark:bg-[#1E293B]/60 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:bg-white dark:focus:bg-[#1E293B] focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600 transition-all"
-                    />
-                  </div>
-                </div>
-
-                <!-- Subject Input -->
-                <div>
-                  <label for="contact-subject" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
-                    Subject / Discussion Topic
-                  </label>
-                  <input 
-                    type="text" 
-                    id="contact-subject" 
-                    name="subject" 
-                    placeholder="Internship opportunity / Data analysis query" 
-                    class="w-full px-3.5 py-2.5 text-sm bg-slate-50/50 dark:bg-[#1E293B]/60 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:bg-white dark:focus:bg-[#1E293B] focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600 transition-all"
-                  />
-                </div>
-
-                <!-- Message Input -->
-                <div>
-                  <label for="contact-message" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
-                    Message <span class="text-red-500">*</span>
-                  </label>
-                  <textarea 
-                    id="contact-message" 
-                    name="message" 
-                    rows="4" 
-                    required 
-                    placeholder="Hello Hamza, we are interested in discussing an analytics opportunity..."
-                    class="w-full px-3.5 py-2.5 text-sm bg-slate-50/50 dark:bg-[#1E293B]/60 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:bg-white dark:focus:bg-[#1E293B] focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600 transition-all resize-y"
-                  ></textarea>
-                </div>
-
-                <!-- Submit Button -->
-                <div class="pt-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-                  <button 
-                    type="submit" 
-                    id="submit-btn"
-                    class="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 rounded-lg shadow-sm hover:shadow transition-all duration-200 cursor-pointer"
-                  >
-                    <i class="fa-regular fa-paper-plane text-xs"></i>
-                    <span id="submit-btn-text">Submit Message</span>
-                  </button>
-
-                  <span class="text-xs text-slate-400 dark:text-slate-500">
-                    Direct reply via email or WhatsApp
-                  </span>
-                </div>
-
-                <!-- Form Feedback Status Banner -->
-                <div id="form-feedback" class="hidden mt-4 p-4 rounded-lg text-xs leading-relaxed transition-all"></div>
-              </form>
-
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ==================== 7. FOOTER ==================== -->
-  <footer class="bg-white dark:bg-[#0B0F19] border-t border-slate-200/90 dark:border-slate-800/90 py-10 transition-colors duration-200">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-        
-        <!-- Left: Branding & Tagline -->
-        <div class="flex items-center gap-3">
-          <span class="w-7 h-7 rounded-md bg-indigo-600 text-white flex items-center justify-center text-xs font-mono font-bold">
-            HS
-          </span>
-          <div>
-            <span class="text-sm font-bold text-slate-900 dark:text-white block">Muhammad Hamza Shah</span>
-            <span class="text-xs text-slate-500 dark:text-slate-400">BS Statistical Data Science · IIUI Islamabad</span>
-          </div>
-        </div>
-
-        <!-- Center: Quick Links -->
-        <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-600 dark:text-slate-400 font-medium">
-          <a href="#home" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Home</a>
-          <a href="#about" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About</a>
-          <a href="#skills" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Skills</a>
-          <a href="#education" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Education</a>
-          <a href="#contact" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a>
-        </div>
-
-        <!-- Right: Social Icons & Back to Top -->
-        <div class="flex items-center gap-3">
-          <a href="https://github.com/hamzads077-ds" target="_blank" rel="noopener noreferrer" class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm transition-colors" title="GitHub" aria-label="GitHub">
-            <i class="fa-brands fa-github"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/hamzads077" target="_blank" rel="noopener noreferrer" class="text-slate-500 dark:text-slate-400 hover:text-[#0A66C2] dark:hover:text-[#38BDF8] text-sm transition-colors" title="LinkedIn" aria-label="LinkedIn">
-            <i class="fa-brands fa-linkedin-in"></i>
-          </a>
-          <a href="https://wa.me/923180564651" target="_blank" rel="noopener noreferrer" class="text-slate-500 dark:text-slate-400 hover:text-[#25D366] text-sm transition-colors" title="WhatsApp" aria-label="WhatsApp">
-            <i class="fa-brands fa-whatsapp"></i>
-          </a>
-          <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="ml-2 w-8 h-8 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-slate-50 dark:hover:bg-slate-800 flex items-center justify-center transition-colors" title="Back to top" aria-label="Back to top">
-            <i class="fa-solid fa-arrow-up text-xs"></i>
-          </button>
-        </div>
-
-      </div>
-
-      <div class="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800 flex items-center justify-center text-xs text-slate-400 dark:text-slate-500">
-        <p>&copy; <span id="current-year"></span> Muhammad Hamza Shah. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ==================== SCRIPTS & INTERACTION ==================== -->
-  <!-- AOS Script -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  
-  <script>
-    // Initialize AOS (Animate On Scroll)
-    document.addEventListener('DOMContentLoaded', () => {
-      AOS.init({
-        duration: 650,
-        easing: 'ease-out-cubic',
-        once: true,
-        offset: 60
-      });
-
-      // Set copyright year
-      const yearEl = document.getElementById('current-year');
-      if (yearEl) {
-        yearEl.textContent = new Date().getFullYear();
-      }
-
-      // Initialize theme toggle icon state
-      initThemeToggle();
-    });
-
-    // Dark Mode Theme Controller
-    function initThemeToggle() {
-      const themeToggleBtn = document.getElementById('theme-toggle-btn');
-      const themeToggleIcon = document.getElementById('theme-toggle-icon');
-
-      function updateThemeIcon() {
-        const isDark = document.documentElement.classList.contains('dark');
-        if (themeToggleIcon && themeToggleBtn) {
-          if (isDark) {
-            themeToggleIcon.className = 'fa-solid fa-sun text-sm text-amber-400';
-            themeToggleBtn.setAttribute('title', 'Switch to light mode');
-            themeToggleBtn.setAttribute('aria-label', 'Switch to light mode');
-          } else {
-            themeToggleIcon.className = 'fa-solid fa-moon text-sm text-slate-600';
-            themeToggleBtn.setAttribute('title', 'Switch to dark mode');
-            themeToggleBtn.setAttribute('aria-label', 'Switch to dark mode');
-          }
-        }
-      }
-
-      if (themeToggleBtn) {
-        themeToggleBtn.addEventListener('click', () => {
-          const isDark = document.documentElement.classList.toggle('dark');
-          localStorage.setItem('theme', isDark ? 'dark' : 'light');
-          updateThemeIcon();
-        });
-        updateThemeIcon();
-      }
-
-      // Listen for system color scheme preference changes
-      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-        if (!localStorage.getItem('theme')) {
-          if (e.matches) {
-            document.documentElement.classList.add('dark');
-          } else {
-            document.documentElement.classList.remove('dark');
-          }
-          updateThemeIcon();
-        }
-      });
-    }
-
-    // Mobile Navigation Drawer Toggle
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuIcon = document.getElementById('menu-icon');
-
-    if (mobileMenuBtn && mobileMenu) {
-      mobileMenuBtn.addEventListener('click', () => {
-        const isHidden = mobileMenu.classList.contains('hidden');
-        if (isHidden) {
-          mobileMenu.classList.remove('hidden');
-          mobileMenuBtn.setAttribute('aria-expanded', 'true');
-          menuIcon.classList.remove('fa-bars');
-          menuIcon.classList.add('fa-xmark');
-        } else {
-          mobileMenu.classList.add('hidden');
-          mobileMenuBtn.setAttribute('aria-expanded', 'false');
-          menuIcon.classList.remove('fa-xmark');
-          menuIcon.classList.add('fa-bars');
-        }
-      });
-
-      // Close mobile drawer on link click
-      document.querySelectorAll('.mobile-nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-          mobileMenu.classList.add('hidden');
-          mobileMenuBtn.setAttribute('aria-expanded', 'false');
-          menuIcon.classList.remove('fa-xmark');
-          menuIcon.classList.add('fa-bars');
-        });
-      });
-    }
-
-    // Active Navigation Highlight on Scroll
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('header nav a');
-
-    window.addEventListener('scroll', () => {
-      let currentSection = '';
-      const scrollY = window.pageYOffset;
-
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 120;
-        const sectionHeight = section.offsetHeight;
-        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-          currentSection = section.getAttribute('id');
-        }
-      });
-
-      navLinks.forEach(link => {
-        link.classList.remove('text-indigo-600', 'dark:text-indigo-400', 'font-semibold');
-        if (link.getAttribute('href') === `#${currentSection}`) {
-          link.classList.add('text-indigo-600', 'dark:text-indigo-400', 'font-semibold');
-        }
-      });
-    });
-
-    // Contact Form Handler
-    function handleContactSubmit(event) {
-      event.preventDefault();
-      
-      const form = document.getElementById('portfolio-contact-form');
-      const submitBtn = document.getElementById('submit-btn');
-      const submitBtnText = document.getElementById('submit-btn-text');
-      const feedback = document.getElementById('form-feedback');
-
-      const name = document.getElementById('contact-name').value.trim();
-      const email = document.getElementById('contact-email').value.trim();
-      const subject = document.getElementById('contact-subject').value.trim() || 'Portfolio Inquiry';
-      const message = document.getElementById('contact-message').value.trim();
-
-      if (!name || !email || !message) {
-        feedback.className = 'mt-4 p-4 rounded-lg text-xs leading-relaxed bg-red-50 dark:bg-red-950/50 border border-red-200 dark:border-red-900/60 text-red-700 dark:text-red-300 block';
-        feedback.innerHTML = '<strong>Incomplete form:</strong> Please fill in all required fields (Name, Email, Message).';
-        return;
-      }
-
-      // Loading state
-      submitBtn.disabled = true;
-      submitBtnText.textContent = 'Processing...';
-
-      setTimeout(() => {
-        submitBtn.disabled = false;
-        submitBtnText.textContent = 'Submit Message';
-        form.reset();
-
-        // Construct friendly WhatsApp redirect option & confirmation
-        const encodedMsg = encodeURIComponent(`Hi Hamza, my name is ${name} (${email}). Subject: ${subject}. Message: ${message}`);
-        const waLink = `https://wa.me/923180564651?text=${encodedMsg}`;
-
-        feedback.className = 'mt-4 p-4 rounded-lg text-xs leading-relaxed bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-300 block';
-        feedback.innerHTML = `
-          <div class="flex items-start gap-2.5">
-            <i class="fa-solid fa-circle-check text-emerald-600 dark:text-emerald-400 mt-0.5 text-sm"></i>
-            <div>
-              <p class="font-semibold mb-1">Thank you, ${name}!</p>
-              <p class="mb-2 text-slate-600 dark:text-slate-300">Your message has been formatted. For the fastest response, you can also forward this note directly via WhatsApp:</p>
-              <a href="${waLink}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 font-semibold text-emerald-700 dark:text-emerald-400 hover:text-emerald-800 dark:hover:text-emerald-300 underline">
-                <i class="fa-brands fa-whatsapp text-sm"></i> Send formatted text via WhatsApp &rarr;
-              </a>
-            </div>
-          </div>
-        `;
-      }, 500);
-    }
-  </script>
+  <header id="main-header" class="sticky top-0 z-50 w-full glass-nav border-b border-slate-200/80 dark:border-slate-800/80 transition-all duration-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <a href="#home" class="group flex items-center gap-2.5 text-slate-900 dark:text-white font-bold text-base tracking-tight hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+        <span class="w-8 h-8 rounded-lg bg-indigo-600 text-white flex items-center justify-center text-xs font-mono font-semibold shadow-sm group-hover:bg-indigo-700 transition-colors">
+          HS
+        </span>
+        <span class="tracking-tight text-slate-900 dark:text-white font-bold">Muhammad Hamza Shah</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600 dark:text-slate-300">
+        <a href="#home" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors py-1 relative hover:after:w-full after:w-0 after:h-0.5 after:bg-indigo-600 after:absolute after:bottom-0 after:left-0 after:transition-all">Home</a>
+        <a href="#about" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors py-1 relative hover:after:w-full after:w-0 after:h-0.5 after:bg-indigo-600 after:absolute after:bottom-0 after:left-0 after:transition-all">About</a>
+        <a href="#skills" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors py-1 relative hover:after:w-full after:w-0 after:h-0.5 after:bg-indigo-600 after:absolute after:bottom-0 after:left-0 after:transition-all">Skills</a>
+        <a href="#education" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors py-1 relative hover:after:w-full after:w-0 after:h-0.5 after:bg-indigo-600 after:absolute after:bottom-0 after:left-0 after:transition-all">Education</a>
+        <a href="#contact" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors py-1 relative hover:after:w-full after:w-0 after:h-0.5 after:bg-indigo-600 after:absolute after:bottom-0 after:left-0 after:transition-all">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        <button 
+          id="theme-toggle-btn" 
+          type="button" 
+          class="w-9 h-9 rounded-lg border border-slate-200/90 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:border-slate-300 dark:hover:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800/80 flex items-center justify-center transition-all duration-200 cursor-pointer" 
+          aria-label="Toggle dark mode" 
+          title="Toggle dark / light mode"
+        >
+          <i id="theme-toggle-icon" class="fa-solid fa-moon text-sm"></i>
+        </button>
+
+        <a href="https://github.com/hamzads077-ds" target="_blank" rel="noopener noreferrer" aria-label="Muhammad Hamza Shah GitHub Profile" class="w-9 h-9 rounded-lg border border-slate-200/90 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:border-slate-300 dark:hover:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800/80 flex items-center justify-center transition-all duration-200" title="GitHub">
+          <i class="fa-brands fa-github text-base"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/hamzads077" target="_blank" rel="noopener noreferrer" aria-label="Muhammad Hamza Shah LinkedIn Profile" class="w-9 h-9 rounded-lg border border-slate-200/90 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-[#0A66C2] dark:hover:text-[#38BDF8] hover:border-slate-300 dark:hover:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800/80 flex items-center justify-center transition-all duration-200" title="LinkedIn">
+          <i class="fa-brands fa-linkedin-in text-base"></i>
+        </a>
+
+        <a href="https://wa.me/923180564651" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" class="w-9 h-9 rounded-lg border border-slate-200/90 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-[#25D366] hover:border-emerald-200 dark:hover:border-emerald-800/80 hover:bg-emerald-50/50 dark:hover:bg-emerald-950/40 flex items-center justify-center transition-all duration-200" title="WhatsApp: +923180564651">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+        </a>
+
+        <button id="mobile-menu-btn" type="button" class="md:hidden w-9 h-9 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center transition-colors" aria-label="Toggle navigation menu" aria-expanded="false">
+          <i id="menu-icon" class="fa-solid fa-bars text-sm"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0E1526] px-4 pt-3 pb-6 space-y-3 shadow-lg">
+      <div class="flex flex-col space-y-2 text-sm font-medium text-slate-700 dark:text-slate-200">
+        <a href="#home" class="mobile-nav-link px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/60 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Home</a>
+        <a href="#about" class="mobile-nav-link px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/60 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About</a>
+        <a href="#skills" class="mobile-nav-link px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/60 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Skills</a>
+        <a href="#education" class="mobile-nav-link px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/60 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Education</a>
+        <a href="#contact" class="mobile-nav-link px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/60 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a>
+      </div>
+      <div class="pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
+        <span>Direct Contact:</span>
+        <a href="https://wa.me/923180564651" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-600 dark:text-emerald-400 hover:underline">
+          <i class="fa-brands fa-whatsapp mr-1"></i>+92 318 0564651
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+
+    <section id="home" class="relative pt-16 pb-20 md:pt-24 md:pb-28 overflow-hidden dot-pattern">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="max-w-3xl" data-aos="fade-up" data-aos-duration="700">
+          
+          <div class="inline-flex items-center gap-2 mb-6 text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-300 bg-white/90 dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 py-1.5 px-3.5 rounded-full shadow-subtle">
+            <span class="relative flex h-2.5 w-2.5">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+            </span>
+            <span>Available for Data Science &amp; Analytics Internships</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold text-slate-900 dark:text-white tracking-tight leading-[1.15] text-balance mb-6">
+            Bridging Statistical Theory with <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-indigo-700 to-sky-500 dark:from-indigo-400 dark:via-indigo-300 dark:to-sky-400">Python &amp; SQL</span> Development
+          </h1>
+
+          <p class="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mb-8">
+            BS Statistical Data Science Student at International Islamic University Islamabad (IIUI), turning complex data into actionable analytical insights through quantitative rigor and reproducible code.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4 pt-1">
+            <a href="https://wa.me/923180564651" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-5 py-3 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 rounded-lg shadow-sm hover:shadow transition-all duration-200 whitespace-nowrap">
+              <i class="fa-brands fa-whatsapp text-lg text-emerald-300"></i>
+              <span>Connect on WhatsApp</span>
+            </a>
+
+            <a href="https://github.com/hamzads077-ds" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 active:bg-slate-100 dark:active:bg-slate-800 rounded-lg shadow-subtle transition-all duration-200 whitespace-nowrap">
+              <i class="fa-brands fa-github text-base text-slate-700 dark:text-slate-200"></i>
+              <span>View GitHub</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/hamzads077" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-3 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-white/60 dark:hover:bg-slate-800/60 rounded-lg transition-colors whitespace-nowrap">
+              <i class="fa-brands fa-linkedin text-[#0A66C2] dark:text-[#38BDF8] text-base"></i>
+              <span>LinkedIn Profile</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-slate-400 dark:text-slate-500"></i>
+            </a>
+          </div>
+
+          <div class="mt-12 pt-8 border-t border-slate-200/90 dark:border-slate-800 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs text-slate-500 dark:text-slate-400 font-mono">
+            <div>
+              <span class="block text-slate-400 dark:text-slate-500 font-sans text-[11px] uppercase tracking-wider mb-1">Institution</span>
+              <span class="text-slate-800 dark:text-slate-200 font-semibold font-sans">IIUI Islamabad</span>
+            </div>
+            <div>
+              <span class="block text-slate-400 dark:text-slate-500 font-sans text-[11px] uppercase tracking-wider mb-1">Degree Major</span>
+              <span class="text-slate-800 dark:text-slate-200 font-semibold font-sans">Statistical Data Science</span>
+            </div>
+            <div>
+              <span class="block text-slate-400 dark:text-slate-500 font-sans text-[11px] uppercase tracking-wider mb-1">Core Stack</span>
+              <span class="text-slate-800 dark:text-slate-200 font-semibold font-sans">Python · SQL</span>
+            </div>
+            <div>
+              <span class="block text-slate-400 dark:text-slate-500 font-sans text-[11px] uppercase tracking-wider mb-1">Environment</span>
+              <span class="text-slate-800 dark:text-slate-200 font-semibold font-sans">VS Code · Jupyter</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white dark:bg-[#0E1526] border-y border-slate-200/80 dark:border-slate-800/80 transition-colors duration-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-2xl mb-12" data-aos="fade-up" data-aos-duration="600">
+          <p class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-2 font-mono">01. Background &amp; Philosophy</p>
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white tracking-tight">Analytical Mindset Rooted in Statistical Foundations</h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <div class="lg:col-span-7 space-y-5 text-slate-600 dark:text-slate-300 text-base leading-relaxed" data-aos="fade-up" data-aos-duration="650">
+            <div class="bg-[#F8FAFC] dark:bg-[#131B2E] border border-slate-200/90 dark:border-slate-800 rounded-xl p-6 sm:p-7 shadow-subtle transition-colors">
+              <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
+                <i class="fa-solid fa-chart-line text-indigo-600 dark:text-indigo-400 text-sm"></i>
+                From Mathematical Foundations to Code Execution
+              </h3>
+              <p class="mb-4">
+                I am an undergraduate student in <strong>Statistical Data Science at International Islamic University Islamabad (IIUI)</strong>. My education places statistical rigor at the core of data computation—ensuring every metric, hypothesis, and regression model is mathematically sound rather than just an automated black box.
+              </p>
+              <p>
+                My work centers around <strong>exploratory data analysis (EDA)</strong>, data manipulation, and building structured database queries with <strong>Python and SQL</strong>. Whether diagnosing variance in sample distributions, cleaning noisy real-world datasets, or isolating causal correlations, I apply statistical principles to extract genuine clarity.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
+              <div class="p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0F172A] shadow-subtle transition-colors">
+                <div class="w-8 h-8 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-3">
+                  <i class="fa-solid fa-square-root-variable text-sm"></i>
+                </div>
+                <h4 class="text-sm font-semibold text-slate-900 dark:text-white mb-1.5">Hypothesis Testing</h4>
+                <p class="text-xs text-slate-500 dark:text-slate-400 leading-normal">
+                  Evaluating statistical significance, p-values, confidence intervals, and parametric vs. non-parametric assumptions.
+                </p>
+              </div>
+
+              <div class="p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0F172A] shadow-subtle transition-colors">
+                <div class="w-8 h-8 rounded-lg bg-sky-50 dark:bg-sky-950/60 text-sky-600 dark:text-sky-400 flex items-center justify-center mb-3">
+                  <i class="fa-solid fa-database text-sm"></i>
+                </div>
+                <h4 class="text-sm font-semibold text-slate-900 dark:text-white mb-1.5">Relational Querying</h4>
+                <p class="text-xs text-slate-500 dark:text-slate-400 leading-normal">
+                  Crafting clean, optimized SQL queries with multi-table joins, subqueries, group aggregations, and data filtering.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 space-y-4" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
+            
+            <div class="bg-gradient-to-br from-slate-900 to-indigo-950 text-white rounded-xl p-6 sm:p-7 shadow-card border border-slate-800/80 dark:border-slate-700/60">
+              <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-4">
+                <span class="text-xs font-mono tracking-wider text-slate-400 uppercase">Profile Snapshot</span>
+                <span class="inline-flex items-center gap-1.5 text-xs text-emerald-400">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                  Active Student
+                </span>
+              </div>
+
+              <div class="space-y-4 text-sm">
+                <div>
+                  <span class="text-xs text-slate-400 block mb-0.5">Full Name</span>
+                  <span class="font-semibold text-white">Muhammad Hamza Shah</span>
+                </div>
+                <div>
+                  <span class="text-xs text-slate-400 block mb-0.5">Academic Program</span>
+                  <span class="font-medium text-slate-200">BS Statistical Data Science</span>
+                </div>
+                <div>
+                  <span class="text-xs text-slate-400 block mb-0.5">University</span>
+                  <span class="font-medium text-slate-200">International Islamic University Islamabad (IIUI)</span>
+                </div>
+                <div>
+                  <span class="text-xs text-slate-400 block mb-0.5">Primary Languages</span>
+                  <span class="font-mono text-xs text-indigo-300">Python · SQL</span>
+                </div>
+                <div>
+                  <span class="text-xs text-slate-400 block mb-0.5">Direct WhatsApp</span>
+                  <a href="https://wa.me/923180564651" target="_blank" rel="noopener noreferrer" class="font-mono text-xs text-emerald-300 hover:text-emerald-200 underline decoration-dotted">
+                    +92 318 0564651
+                  </a>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+                <span>Location: Islamabad, Pakistan</span>
+                <a href="#contact" class="text-indigo-300 hover:text-white transition-colors font-medium">Get in touch &rarr;</a>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-[#131B2E] border border-slate-200 dark:border-slate-800 rounded-xl p-5 shadow-subtle transition-colors">
+              <h4 class="text-xs font-semibold text-slate-900 dark:text-white uppercase tracking-wider mb-2 font-mono">Core Focus</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                Combining rigorous statistical methodologies (inference, regression modeling, probability distributions) with modern data engineering tooling for end-to-end analytical clarity.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="skills" class="py-20 bg-[#F8FAFC] dark:bg-[#0B0F19] transition-colors duration-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-2xl mb-14" data-aos="fade-up" data-aos-duration="600">
+          <p class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-2 font-mono">02. Capabilities &amp; Tooling</p>
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white tracking-tight">Core Skills &amp; Tech Stack</h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-2">
+            Balanced foundation across programming languages, mathematical &amp; statistical analytics, and modern developer environments.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <div class="feature-card bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-subtle flex flex-col justify-between" data-aos="fade-up" data-aos-duration="650">
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <div class="w-10 h-10 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-100/60 dark:border-indigo-900/50 text-indigo-600 dark:text-indigo-400 flex items-center justify-center">
+                  <i class="fa-solid fa-code text-base"></i>
+                </div>
+                <span class="text-xs font-mono font-medium text-slate-400 dark:text-slate-500">01 / Core Languages</span>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Languages</h3>
+              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-6 leading-relaxed">
+                Scripting, data transformation pipelines, and relational database queries.
+              </p>
+
+              <div class="space-y-4">
+                <div class="p-3.5 rounded-lg bg-slate-50/70 dark:bg-[#1E293B]/60 border border-slate-200/80 dark:border-slate-700/60">
+                  <div class="flex items-center justify-between mb-1.5">
+                    <span class="font-semibold text-sm text-slate-900 dark:text-slate-100 flex items-center gap-2">
+                      <i class="fa-brands fa-python text-indigo-600 dark:text-indigo-400"></i> Python
+                    </span>
+                    <span class="text-xs font-mono text-slate-500 dark:text-slate-400">Analytics &amp; Modeling</span>
+                  </div>
+                  <p class="text-xs text-slate-600 dark:text-slate-300 leading-normal">
+                    Exploratory data analysis, statistical scripting, data structures, and algorithmic logic.
+                  </p>
+                </div>
+
+                <div class="p-3.5 rounded-lg bg-slate-50/70 dark:bg-[#1E293B]/60 border border-slate-200/80 dark:border-slate-700/60">
+                  <div class="flex items-center justify-between mb-1.5">
+                    <span class="font-semibold text-sm text-slate-900 dark:text-slate-100 flex items-center gap-2">
+                      <i class="fa-solid fa-database text-sky-600 dark:text-sky-400"></i> SQL
+                    </span>
+                    <span class="text-xs font-mono text-slate-500 dark:text-slate-400">Querying &amp; Schemas</span>
+                  </div>
+                  <p class="text-xs text-slate-600 dark:text-slate-300 leading-normal">
+                    Complex joins, grouping, aggregations, window functions, and schema structuring.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center gap-2 text-xs text-slate-400 dark:text-slate-500">
+              <i class="fa-solid fa-check text-indigo-600 dark:text-indigo-400 text-[10px]"></i>
+              <span>Validated in academic projects &amp; exercises</span>
+            </div>
+          </div>
+
+          <div class="feature-card bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-subtle flex flex-col justify-between" data-aos="fade-up" data-aos-duration="650" data-aos-delay="100">
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <div class="w-10 h-10 rounded-lg bg-sky-50 dark:bg-sky-950/60 border border-sky-100/60 dark:border-sky-900/50 text-sky-600 dark:text-sky-400 flex items-center justify-center">
+                  <i class="fa-solid fa-chart-pie text-base"></i>
+                </div>
+                <span class="text-xs font-mono font-medium text-slate-400 dark:text-slate-500">02 / Quantitative Logic</span>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Statistical &amp; Analytics</h3>
+              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-6 leading-relaxed">
+                Methodological rigor for examining datasets, evaluating error, and extracting patterns.
+              </p>
+
+              <div class="space-y-4">
+                <div class="p-3.5 rounded-lg bg-slate-50/70 dark:bg-[#1E293B]/60 border border-slate-200/80 dark:border-slate-700/60">
+                  <div class="font-semibold text-sm text-slate-900 dark:text-slate-100 mb-1 flex items-center gap-2">
+                    <i class="fa-solid fa-calculator text-indigo-500 dark:text-indigo-400"></i> Statistics &amp; Probability
+                  </div>
+                  <p class="text-xs text-slate-600 dark:text-slate-300 leading-normal">
+                    Descriptive metrics, probability distributions, central limit theorem, and confidence intervals.
+                  </p>
+                </div>
+
+                <div class="p-3.5 rounded-lg bg-slate-50/70 dark:bg-[#1E293B]/60 border border-slate-200/80 dark:border-slate-700/60">
+                  <div class="font-semibold text-sm text-slate-900 dark:text-slate-100 mb-1 flex items-center gap-2">
+                    <i class="fa-solid fa-bezier-curve text-sky-500 dark:text-sky-400"></i> Statistical Modeling
+                  </div>
+                  <p class="text-xs text-slate-600 dark:text-slate-300 leading-normal">
+                    Linear &amp; multivariate regression, residual diagnostics, correlation analysis, and model fitting.
+                  </p>
+                </div>
+
+                <div class="p-3.5 rounded-lg bg-slate-50/70 dark:bg-[#1E293B]/60 border border-slate-200/80 dark:border-slate-700/60">
+                  <div class="font-semibold text-sm text-slate-900 dark:text-slate-100 mb-1 flex items-center gap-2">
+                    <i class="fa-solid fa-filter text-indigo-500 dark:text-indigo-400"></i> Wrangling &amp; Visualization
+                  </div>
+                  <p class="text-xs text-slate-600 dark:text-slate-300 leading-normal">
+                    Handling missing values, outlier detection, data normalization, and communicative charts.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center gap-2 text-xs text-slate-400 dark:text-slate-500">
+              <i class="fa-solid fa-check text-sky-600 dark:text-sky-400 text-[10px]"></i>
+              <span>Grounded in mathematical proof &amp; verification</span>
+            </div>
+          </div>
+
+          <div class="feature-card bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-subtle flex flex-col justify-between" data-aos="fade-up" data-aos-duration="650" data-aos-delay="200">
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <div class="w-10 h-10 rounded-lg bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-100/60 dark:border-emerald-900/50 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
+                  <i class="fa-solid fa-terminal text-base"></i>
+                </div>
+                <span class="text-xs font-mono font-medium text-slate-400 dark:text-slate-500">03 / Tooling &amp; Workflow</span>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Developer Tools</h3>
+              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-6 leading-relaxed">
+                Reproducible execution, interactive notebooks, and version-controlled collaboration.
+              </p>
+
+              <div class="space-y-4">
+                <div class="p-3.5 rounded-lg bg-slate-50/70 dark:bg-[#1E293B]/60 border border-slate-200/80 dark:border-slate-700/60">
+                  <div class="flex items-center justify-between mb-1.5">
+                    <span class="font-semibold text-sm text-slate-900 dark:text-slate-100 flex items-center gap-2">
+                      <i class="fa-solid fa-laptop-code text-blue-500 dark:text-blue-400"></i> Visual Studio Code
+                    </span>
+                    <span class="text-xs font-mono text-slate-500 dark:text-slate-400">IDE</span>
+                  </div>
+                  <p class="text-xs text-slate-600 dark:text-slate-300 leading-normal">
+                    Primary development environment with Python linting, debugging, and workspace management.
+                  </p>
+                </div>
+
+                <div class="p-3.5 rounded-lg bg-slate-50/70 dark:bg-[#1E293B]/60 border border-slate-200/80 dark:border-slate-700/60">
+                  <div class="flex items-center justify-between mb-1.5">
+                    <span class="font-semibold text-sm text-slate-900 dark:text-slate-100 flex items-center gap-2">
+                      <i class="fa-solid fa-book-open text-amber-500 dark:text-amber-400"></i> Jupyter Notebooks
+                    </span>
+                    <span class="text-xs font-mono text-slate-500 dark:text-slate-400">Interactive EDA</span>
+                  </div>
+                  <p class="text-xs text-slate-600 dark:text-slate-300 leading-normal">
+                    Cell-by-cell data experimentation, narrative reporting, and visualization checkpoints.
+                  </p>
+                </div>
+
+                <div class="p-3.5 rounded-lg bg-slate-50/70 dark:bg-[#1E293B]/60 border border-slate-200/80 dark:border-slate-700/60">
+                  <div class="flex items-center justify-between mb-1.5">
+                    <span class="font-semibold text-sm text-slate-900 dark:text-slate-100 flex items-center gap-2">
+                      <i class="fa-brands fa-git-alt text-orange-500 dark:text-orange-400"></i> Git &amp; GitHub
+                    </span>
+                    <span class="text-xs font-mono text-slate-500 dark:text-slate-400">Version Control</span>
+                  </div>
+                  <p class="text-xs text-slate-600 dark:text-slate-300 leading-normal">
+                    Commit histories, branching, repository management, and code collaboration.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center gap-2 text-xs text-slate-400 dark:text-slate-500">
+              <i class="fa-solid fa-check text-emerald-600 dark:text-emerald-400 text-[10px]"></i>
+              <span>Active GitHub portfolio maintenance</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="education" class="py-20 bg-white dark:bg-[#0E1526] border-y border-slate-200/80 dark:border-slate-800/80 transition-colors duration-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-2xl mb-12" data-aos="fade-up" data-aos-duration="600">
+          <p class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-2 font-mono">03. Academic Journey</p>
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white tracking-tight">Formal Education</h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-2">
+            Rigorous undergraduate training combining theoretical mathematics and computational statistical science.
+          </p>
+        </div>
+
+        <div class="max-w-4xl" data-aos="fade-up" data-aos-duration="700">
+          <div class="relative pl-6 sm:pl-8 border-l-2 border-indigo-200 dark:border-indigo-900/60">
+            
+            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-indigo-600 border-4 border-white dark:border-[#0E1526] shadow-sm"></div>
+
+            <div class="bg-[#F8FAFC] dark:bg-[#131B2E] border border-slate-200 dark:border-slate-800 rounded-xl p-6 sm:p-8 shadow-subtle transition-colors">
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                <div>
+                  <h3 class="text-xl font-bold text-slate-900 dark:text-white">Bachelor of Science in Statistical Data Science</h3>
+                  <div class="text-sm font-semibold text-indigo-600 dark:text-indigo-400 flex items-center gap-2 mt-1">
+                    <i class="fa-solid fa-building-columns text-xs"></i>
+                    <span>International Islamic University Islamabad (IIUI)</span>
+                  </div>
+                </div>
+                <div class="text-xs font-mono text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 px-3 py-1.5 rounded-md self-start sm:self-auto shadow-subtle">
+                  Islamabad, Pakistan
+                </div>
+              </div>
+
+              <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+                Enrolled in the comprehensive Statistical Data Science program at IIUI. The curriculum bridges rigorous mathematical probability theory with practical computational implementations in Python and SQL to prepare graduates for analytical problem-solving in data-intensive domains.
+              </p>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 border-t border-slate-200/90 dark:border-slate-800 text-xs">
+                <div>
+                  <h4 class="font-semibold text-slate-900 dark:text-slate-100 mb-2 flex items-center gap-1.5">
+                    <i class="fa-solid fa-book text-indigo-600 dark:text-indigo-400 text-[11px]"></i> Core Subject Areas
+                  </h4>
+                  <ul class="space-y-1.5 text-slate-600 dark:text-slate-400">
+                    <li class="flex items-center gap-2">
+                      <span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
+                      <span>Statistical Inference &amp; Estimation Theory</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
+                      <span>Probability Distributions &amp; Stochastic Logic</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
+                      <span>Regression Analysis &amp; Experimental Design</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 class="font-semibold text-slate-900 dark:text-slate-100 mb-2 flex items-center gap-1.5">
+                    <i class="fa-solid fa-code-branch text-sky-600 dark:text-sky-400 text-[11px]"></i> Computational Labs
+                  </h4>
+                  <ul class="space-y-1.5 text-slate-600 dark:text-slate-400">
+                    <li class="flex items-center gap-2">
+                      <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
+                      <span>Relational Database Management with SQL</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
+                      <span>Python Data Wrangling &amp; Exploratory Analysis</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
+                      <span>Notebook Documentation &amp; Version Control</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-[#F8FAFC] dark:bg-[#0B0F19] transition-colors duration-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-2xl mb-12" data-aos="fade-up" data-aos-duration="600">
+          <p class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-2 font-mono">04. Get In Touch</p>
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white tracking-tight">Direct Contact &amp; Channels</h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-2">
+            Interested in data science internships, quantitative collaboration, or research projects? Reach out directly.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <div class="lg:col-span-5 space-y-5" data-aos="fade-up" data-aos-duration="650">
+            
+            <div class="bg-white dark:bg-[#111827] border-2 border-emerald-500/40 dark:border-emerald-600/40 rounded-xl p-6 sm:p-7 shadow-card relative overflow-hidden transition-colors">
+              <div class="absolute -right-6 -bottom-6 text-emerald-100 dark:text-emerald-950/30 opacity-60 text-9xl pointer-events-none">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+              
+              <div class="relative z-10">
+                <div class="inline-flex items-center gap-2 text-xs font-semibold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 px-2.5 py-1 rounded-md mb-4">
+                  <i class="fa-solid fa-bolt text-[11px]"></i> Fastest Response
+                </div>
+
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Chat Directly on WhatsApp</h3>
+                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+                  Available for instant conversations regarding internships, analytical assignments, and technical queries.
+                </p>
+
+                <a href="https://wa.me/923180564651" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-3 px-5 py-3.5 text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 rounded-lg shadow-sm hover:shadow transition-all duration-200">
+                  <i class="fa-brands fa-whatsapp text-xl"></i>
+                  <span>Chat on WhatsApp (+92 318 0564651)</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-subtle space-y-4 transition-colors">
+              <h4 class="text-xs font-semibold text-slate-900 dark:text-slate-200 uppercase tracking-wider font-mono">Professional Networks</h4>
+              
+              <a href="mailto:hamza.ds.077@gmail.com" class="flex items-center justify-between p-3.5 rounded-lg border border-slate-200/90 dark:border-slate-800 hover:border-indigo-300 dark:hover:border-indigo-700 hover:bg-indigo-50/30 dark:hover:bg-slate-800/60 transition-all duration-200 group">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold">
+                    <i class="fa-regular fa-envelope text-base"></i>
+                  </div>
+                  <div>
+                    <span class="text-sm font-semibold text-slate-900 dark:text-slate-100 block group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Direct Email</span>
+                    <span class="text-xs text-slate-500 dark:text-slate-400 font-mono">hamza.ds.077@gmail.com</span>
+                  </div>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors"></i>
+              </a>
+
+              <a href="https://www.linkedin.com/in/hamzads077" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3.5 rounded-lg border border-slate-200/90 dark:border-slate-800 hover:border-blue-300 dark:hover:border-blue-700 hover:bg-blue-50/30 dark:hover:bg-slate-800/60 transition-all duration-200 group">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-lg bg-[#0A66C2]/10 text-[#0A66C2] dark:text-[#38BDF8] flex items-center justify-center font-bold">
+                    <i class="fa-brands fa-linkedin-in text-base"></i>
+                  </div>
+                  <div>
+                    <span class="text-sm font-semibold text-slate-900 dark:text-slate-100 block group-hover:text-blue-700 dark:group-hover:text-blue-400 transition-colors">LinkedIn Profile</span>
+                    <span class="text-xs text-slate-500 dark:text-slate-400 font-mono">linkedin.com/in/hamzads077</span>
+                  </div>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors"></i>
+              </a>
+
+              <a href="https://github.com/hamzads077-ds" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3.5 rounded-lg border border-slate-200/90 dark:border-slate-800 hover:border-slate-400 dark:hover:border-slate-600 hover:bg-slate-50/70 dark:hover:bg-slate-800/60 transition-all duration-200 group">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-lg bg-slate-900 dark:bg-slate-800 text-white flex items-center justify-center">
+                    <i class="fa-brands fa-github text-base"></i>
+                  </div>
+                  <div>
+                    <span class="text-sm font-semibold text-slate-900 dark:text-slate-100 block group-hover:text-slate-900 dark:group-hover:text-white transition-colors">GitHub Repository</span>
+                    <span class="text-xs text-slate-500 dark:text-slate-400 font-mono">github.com/hamzads077-ds</span>
+                  </div>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover:text-slate-700 dark:group-hover:text-slate-300 transition-colors"></i>
+              </a>
+            </div>
+
+          </div>
+
+          <div class="lg:col-span-7" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
+            <div class="bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 rounded-xl p-6 sm:p-8 shadow-subtle transition-colors">
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Send a Message</h3>
+              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-6">
+                Fill in the details below to initiate contact or discuss internship opportunities.
+              </p>
+
+              <form id="portfolio-contact-form" class="space-y-4" action="https://formspree.io/f/xeaobvbd" method="POST" onsubmit="handleContactSubmit(event)">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="contact-name" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
+                      Your Name <span class="text-red-500">*</span>
+                    </label>
+                    <input 
+                      type="text" 
+                      id="contact-name" 
+                      name="name" 
+                      required 
+                      placeholder="e.g. Alex Henderson" 
+                      class="w-full px-3.5 py-2.5 text-sm bg-slate-50/50 dark:bg-[#1E293B]/60 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:bg-white dark:focus:bg-[#1E293B] focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600 transition-all"
+                    />
+                  </div>
+
+                  <div>
+                    <label for="contact-email" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
+                      Email Address <span class="text-red-500">*</span>
+                    </label>
+                    <input 
+                      type="email" 
+                      id="contact-email" 
+                      name="email" 
+                      required 
+                      placeholder="alex@company.com" 
+                      class="w-full px-3.5 py-2.5 text-sm bg-slate-50/50 dark:bg-[#1E293B]/60 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:bg-white dark:focus:bg-[#1E293B] focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600 transition-all"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="contact-subject" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
+                    Subject / Discussion Topic
+                  </label>
+                  <input 
+                    type="text" 
+                    id="contact-subject" 
+                    name="subject" 
+                    placeholder="Internship opportunity / Data analysis query" 
+                    class="w-full px-3.5 py-2.5 text-sm bg-slate-50/50 dark:bg-[#1E293B]/60 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:bg-white dark:focus:bg-[#1E293B] focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600 transition-all"
+                  />
+                </div>
+
+                <div>
+                  <label for="contact-message" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
+                    Message <span class="text-red-500">*</span>
+                  </label>
+                  <textarea 
+                    id="contact-message" 
+                    name="message" 
+                    rows="4" 
+                    required 
+                    placeholder="Hello Hamza, we are interested in discussing an analytics opportunity..."
+                    class="w-full px-3.5 py-2.5 text-sm bg-slate-50/50 dark:bg-[#1E293B]/60 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:bg-white dark:focus:bg-[#1E293B] focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600 transition-all resize-y"
+                  ></textarea>
+                </div>
+
+                <div class="pt-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                  <button 
+                    type="submit" 
+                    id="submit-btn"
+                    class="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 rounded-lg shadow-sm hover:shadow transition-all duration-200 cursor-pointer"
+                  >
+                    <i class="fa-regular fa-paper-plane text-xs"></i>
+                    <span id="submit-btn-text">Submit Message</span>
+                  </button>
+
+                  <span class="text-xs text-slate-400 dark:text-slate-500">
+                    Direct reply via email or WhatsApp
+                  </span>
+                </div>
+
+                <div id="form-feedback" class="hidden mt-4 p-4 rounded-lg text-xs leading-relaxed transition-all"></div>
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-white dark:bg-[#0B0F19] border-t border-slate-200/90 dark:border-slate-800/90 py-10 transition-colors duration-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        
+        <div class="flex items-center gap-3">
+          <span class="w-7 h-7 rounded-md bg-indigo-600 text-white flex items-center justify-center text-xs font-mono font-bold">
+            HS
+          </span>
+          <div>
+            <span class="text-sm font-bold text-slate-900 dark:text-white block">Muhammad Hamza Shah</span>
+            <span class="text-xs text-slate-500 dark:text-slate-400">BS Statistical Data Science · IIUI Islamabad</span>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-600 dark:text-slate-400 font-medium">
+          <a href="#home" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Home</a>
+          <a href="#about" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About</a>
+          <a href="#skills" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Skills</a>
+          <a href="#education" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Education</a>
+          <a href="#contact" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a href="https://github.com/hamzads077-ds" target="_blank" rel="noopener noreferrer" class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm transition-colors" title="GitHub" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/hamzads077" target="_blank" rel="noopener noreferrer" class="text-slate-500 dark:text-slate-400 hover:text-[#0A66C2] dark:hover:text-[#38BDF8] text-sm transition-colors" title="LinkedIn" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://wa.me/923180564651" target="_blank" rel="noopener noreferrer" class="text-slate-500 dark:text-slate-400 hover:text-[#25D366] text-sm transition-colors" title="WhatsApp" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="ml-2 w-8 h-8 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-slate-50 dark:hover:bg-slate-800 flex items-center justify-center transition-colors" title="Back to top" aria-label="Back to top">
+            <i class="fa-solid fa-arrow-up text-xs"></i>
+          </button>
+        </div>
+
+      </div>
+
+      <div class="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800 flex items-center justify-center text-xs text-slate-400 dark:text-slate-500">
+        <p>&copy; <span id="current-year"></span> Muhammad Hamza Shah. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      AOS.init({
+        duration: 650,
+        easing: 'ease-out-cubic',
+        once: true,
+        offset: 60
+      });
+
+      const yearEl = document.getElementById('current-year');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+
+      initThemeToggle();
+    });
+
+    function initThemeToggle() {
+      const themeToggleBtn = document.getElementById('theme-toggle-btn');
+      const themeToggleIcon = document.getElementById('theme-toggle-icon');
+
+      function updateThemeIcon() {
+        const isDark = document.documentElement.classList.contains('dark');
+        if (themeToggleIcon && themeToggleBtn) {
+          if (isDark) {
+            themeToggleIcon.className = 'fa-solid fa-sun text-sm text-amber-400';
+            themeToggleBtn.setAttribute('title', 'Switch to light mode');
+            themeToggleBtn.setAttribute('aria-label', 'Switch to light mode');
+          } else {
+            themeToggleIcon.className = 'fa-solid fa-moon text-sm text-slate-600';
+            themeToggleBtn.setAttribute('title', 'Switch to dark mode');
+            themeToggleBtn.setAttribute('aria-label', 'Switch to dark mode');
+          }
+        }
+      }
+
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          const isDark = document.documentElement.classList.toggle('dark');
+          localStorage.setItem('theme', isDark ? 'dark' : 'light');
+          updateThemeIcon();
+        });
+        updateThemeIcon();
+      }
+
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+          if (e.matches) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+          updateThemeIcon();
+        }
+      });
+    }
+
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.contains('hidden');
+        if (isHidden) {
+          mobileMenu.classList.remove('hidden');
+          mobileMenuBtn.setAttribute('aria-expanded', 'true');
+          menuIcon.classList.remove('fa-bars');
+          menuIcon.classList.add('fa-xmark');
+        } else {
+          mobileMenu.classList.add('hidden');
+          mobileMenuBtn.setAttribute('aria-expanded', 'false');
+          menuIcon.classList.remove('fa-xmark');
+          menuIcon.classList.add('fa-bars');
+        }
+      });
+
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          mobileMenuBtn.setAttribute('aria-expanded', 'false');
+          menuIcon.classList.remove('fa-xmark');
+          menuIcon.classList.add('fa-bars');
+        });
+      });
+    }
+
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('header nav a');
+
+    window.addEventListener('scroll', () => {
+      let currentSection = '';
+      const scrollY = window.pageYOffset;
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.offsetHeight;
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+          currentSection = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('text-indigo-600', 'dark:text-indigo-400', 'font-semibold');
+        if (link.getAttribute('href') === `#${currentSection}`) {
+          link.classList.add('text-indigo-600', 'dark:text-indigo-400', 'font-semibold');
+        }
+      });
+    });
+
+    function handleContactSubmit(event) {
+    }
+  </script>
 </body>
 </html>
