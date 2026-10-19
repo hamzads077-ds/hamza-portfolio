@@ -14,6 +14,6 @@ This repository contains the source code for my personal portfolio website, show
 - **Hosting:** Cloudflare Pages
 
 ## 📬 Contact & Connect
-- **GitHub:** [hamzads077-ds](https://github.com/hamzads077-ds)
-- **LinkedIn:** [hamzads077](https://www.linkedin.com/in/hamzads077)
-- **WhatsApp:** [+92 318 0564651](https://wa.me/923180564651)
+- [<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" height="28" />](https://github.com/hamzads077-ds)
+- [<img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" height="28" />](https://www.linkedin.com/in/hamzads077)
+- [<img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" height="28" />](https://wa.me/923180564651)
