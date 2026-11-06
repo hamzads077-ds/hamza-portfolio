@@ -117,6 +117,8 @@ em { color: var(--blue); font-style: normal; }
 .footer-wrap { min-height: 90px; font-family: "DM Mono", monospace; font-size: .6rem; text-transform: uppercase; letter-spacing: .06em; }
 .social-links { display: flex; gap: 24px; }
 .social-links a:hover { color: var(--lime); }
+.social-icon { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; }
+.social-icon svg { width: 19px; height: 19px; }
 :focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
 
 @media (max-width: 780px) {
