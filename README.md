@@ -1,30 +1,50 @@
 # Muhammad Hamza Shah — Portfolio
 
-A lightweight, dependency-free portfolio for Muhammad Hamza Shah, a BS Statistical Data Science student at International Islamic University Islamabad and aspiring data scientist.
+Personal portfolio for Muhammad Hamza Shah, a BS Statistical Data Science student at International Islamic University Islamabad and aspiring data scientist.
 
-## Run locally
+## Project overview
 
-No install step is required. From the repository root, start any static file server, for example:
+This is a lightweight, dependency-free static website. It presents Hamza’s background, current education, technical learning areas, selected public GitHub projects, and contact links without inventing employment, completed degrees, years of experience, or achievements.
+
+## Features
+
+- Responsive hero, about, skills, projects, education, and contact sections
+- Accessible semantic HTML, skip link, keyboard focus states, and reduced-motion support
+- Mobile navigation with a small vanilla JavaScript interaction
+- Project links for `mario-database`, `SQL-Student-Data-Analysis`, `python-practice-projects`, `hamza-portfolio`, and `skills-github-pages`
+- ATS-friendly, text-first resume at [`resume.html`](resume.html)
+- Download Resume link from the homepage; the HTML resume is also print-ready for browser **Print → Save as PDF**
+- No framework, package manager, build step, or runtime dependency
+
+## Local usage
+
+From the repository root, run any static file server:
 
 ```bash
 python -m http.server 8000
 ```
 
-Then open <http://localhost:8000>. You can also open `index.html` directly, but a local server is recommended for consistent browser behavior.
+Open <http://localhost:8000>. The site can also be opened directly from `index.html`, although a local server is recommended for consistent browser behavior.
 
-## Build and deploy
+## Resume usage
 
-This is a static site: `index.html`, `styles.css`, `script.js`, and `resume.html` are the complete runtime. There is no build step or dependency manifest.
+Open [`resume.html`](resume.html) to view the ATS-friendly resume. It uses standard headings — Summary, Education, Technical Skills, Projects, and Links / Contact — with plain text, keyword-rich descriptions, and truthful student/project information. To create a PDF for an application, use the browser’s **Print → Save as PDF** option.
 
-To deploy with GitHub Pages:
+## GitHub Pages deployment
+
+GitHub Pages is configured to publish the `main` branch from the repository root. To configure it manually:
 
 1. Push the repository to GitHub.
-2. In **Settings → Pages**, choose **Deploy from a branch**.
-3. Select `main` and the `/ (root)` folder, then save.
-4. Wait for the Pages deployment and open the generated site URL.
+2. Open **Settings → Pages**.
+3. Under **Build and deployment**, choose **Deploy from a branch**.
+4. Select `main` and `/ (root)`, then save.
+5. Wait for the Pages deployment, then open the generated site URL.
 
-The resume button links to `resume.html` and downloads the HTML asset in supporting browsers. The resume is also print-ready: open it and use the browser’s **Print → Save as PDF** option.
+The expected public URL is <https://hamzads077-ds.github.io/hamza-portfolio-site/>.
 
-## Content
+## Public profiles
 
-Project links and profile links point to Muhammad Hamza Shah’s public GitHub, LinkedIn, and website profiles. The site intentionally describes current student status and learning projects without inventing employment, completed degrees, experience, or achievements.
+- Website: <https://hamza-ds.pages.dev>
+- GitHub: <https://github.com/hamzads077-ds>
+- LinkedIn: <https://www.linkedin.com/in/hamzads077>
+- Email: <hamza.ds.077@gmail.com>

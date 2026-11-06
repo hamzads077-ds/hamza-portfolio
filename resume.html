@@ -3,36 +3,110 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Muhammad Hamza Shah — Resume</title>
+    <meta name="description" content="ATS-friendly resume for Muhammad Hamza Shah." />
+    <title>Muhammad Hamza Shah | Resume</title>
     <style>
-      :root { --ink: #172033; --muted: #5d6879; --accent: #5366db; --line: #d9dee7; }
-      * { box-sizing: border-box; } body { margin: 0; color: var(--ink); background: #eef0f3; font: 14px/1.6 Arial, sans-serif; }
-      .page { width: min(820px, calc(100% - 32px)); margin: 32px auto; padding: 55px 62px; background: #fff; box-shadow: 0 8px 30px #17203318; }
-      header { display: flex; justify-content: space-between; gap: 30px; padding-bottom: 28px; border-bottom: 3px solid var(--ink); }
-      h1 { margin: 0 0 6px; font: 800 36px/1 Arial, sans-serif; letter-spacing: -.06em; } h2 { margin: 30px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--line); color: var(--accent); font-size: 12px; letter-spacing: .16em; text-transform: uppercase; }
-      h3 { margin: 0; font-size: 16px; } p { margin: 5px 0 0; color: var(--muted); } .title { color: var(--accent); font-weight: bold; } .contact { text-align: right; color: var(--muted); font-size: 12px; } a { color: inherit; }
-      .intro { margin-top: 22px; font-size: 15px; } .row { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; } ul { margin: 8px 0 0; padding-left: 18px; color: var(--muted); } li + li { margin-top: 4px; }
-      .project { margin-top: 14px; } .project strong { color: var(--ink); } .footer { margin-top: 34px; color: var(--muted); font-size: 11px; }
-      @media print { body { background: #fff; } .page { width: 100%; margin: 0; padding: 32px; box-shadow: none; } a { text-decoration: none; } }
-      @media (max-width: 600px) { .page { padding: 30px 24px; } header, .row { display: block; } .contact { margin-top: 20px; text-align: left; } }
+      :root { --ink: #172033; --muted: #526071; --accent: #4355c7; --line: #d7dce5; }
+      * { box-sizing: border-box; }
+      body { margin: 0; color: var(--ink); background: #eef0f3; font: 14px/1.5 Arial, Helvetica, sans-serif; }
+      .page { width: min(850px, calc(100% - 32px)); margin: 32px auto; padding: 48px 58px; background: #fff; box-shadow: 0 8px 30px #17203318; }
+      header { padding-bottom: 20px; border-bottom: 2px solid var(--ink); }
+      h1 { margin: 0; font-size: 32px; line-height: 1.1; letter-spacing: -.03em; }
+      .headline { margin-top: 5px; color: var(--accent); font-size: 16px; font-weight: 700; }
+      .contact { display: flex; flex-wrap: wrap; gap: 5px 16px; margin-top: 12px; color: var(--muted); font-size: 12px; }
+      a { color: inherit; }
+      h2 { margin: 24px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--line); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; }
+      h3 { margin: 12px 0 2px; font-size: 15px; }
+      p { margin: 0; color: var(--muted); }
+      ul { margin: 6px 0 0; padding-left: 19px; color: var(--muted); }
+      li + li { margin-top: 3px; }
+      .project { margin-top: 11px; }
+      .project p { margin-top: 2px; }
+      .project a { color: var(--accent); }
+      .skills { color: var(--muted); }
+      .skills strong { color: var(--ink); }
+      .footer { margin-top: 26px; color: #788392; font-size: 11px; }
+      @media print {
+        body { background: #fff; }
+        .page { width: 100%; margin: 0; padding: 24px; box-shadow: none; }
+        a { text-decoration: none; }
+      }
+      @media (max-width: 600px) {
+        .page { padding: 28px 22px; }
+        .contact { display: block; }
+        .contact span { display: block; }
+      }
     </style>
   </head>
   <body>
     <main class="page">
       <header>
-        <div><h1>Muhammad Hamza Shah</h1><div class="title">Aspiring Data Scientist</div></div>
-        <div class="contact">Islamabad, Pakistan<br /><a href="mailto:hamza.ds.077@gmail.com">hamza.ds.077@gmail.com</a><br /><a href="https://github.com/hamzads077-ds">github.com/hamzads077-ds</a><br /><a href="https://www.linkedin.com/in/hamzads077">linkedin.com/in/hamzads077</a></div>
+        <h1>Muhammad Hamza Shah</h1>
+        <div class="headline">Aspiring Data Scientist</div>
+        <div class="contact" aria-label="Contact information">
+          <span>Islamabad, Pakistan</span>
+          <span><a href="mailto:hamza.ds.077@gmail.com">hamza.ds.077@gmail.com</a></span>
+          <span><a href="https://github.com/hamzads077-ds">github.com/hamzads077-ds</a></span>
+          <span><a href="https://www.linkedin.com/in/hamzads077">linkedin.com/in/hamzads077</a></span>
+          <span><a href="https://hamza-ds.pages.dev">hamza-ds.pages.dev</a></span>
+        </div>
       </header>
-      <p class="intro">BS Statistical Data Science student at International Islamic University Islamabad with a growing focus on data analysis, Python, SQL, and practical problem-solving.</p>
-      <h2>Education</h2>
-      <h3>BS Statistical Data Science</h3><p>International Islamic University Islamabad · Islamabad, Pakistan</p><p>Currently studying</p>
-      <h2>Selected projects</h2>
-      <div class="project"><h3>Student Data Analysis · SQL</h3><p>Queries and analysis practice using structured student data. <a href="https://github.com/hamzads077-ds/SQL-Student-Data-Analysis">View on GitHub</a></p></div>
-      <div class="project"><h3>Python Practice Projects</h3><p>A collection of exercises and small builds for developing Python fluency. <a href="https://github.com/hamzads077-ds/python-practice-projects">View on GitHub</a></p></div>
-      <div class="project"><h3>Mario Database</h3><p>Database and SQL practice inspired by the Mario universe. <a href="https://github.com/hamzads077-ds/mario-database">View on GitHub</a></p></div>
-      <div class="project"><h3>GitHub Pages Practice</h3><p>Web publishing and portfolio practice using GitHub Pages. <a href="https://github.com/hamzads077-ds/skills-github-pages">View on GitHub</a></p></div>
-      <div class="row"><div><h2>Skills</h2><ul><li>Python</li><li>SQL and databases</li><li>Data analysis</li><li>HTML and CSS</li><li>GitHub and GitHub Pages</li></ul></div><div><h2>Profiles</h2><ul><li><a href="https://hamza-ds.pages.dev">hamza-ds.pages.dev</a></li><li><a href="https://github.com/hamzads077-ds">github.com/hamzads077-ds</a></li><li><a href="https://www.linkedin.com/in/hamzads077">linkedin.com/in/hamzads077</a></li></ul></div></div>
-      <p class="footer">This resume reflects current student status and selected learning projects. Updated November 2026.</p>
+
+      <section>
+        <h2>Summary</h2>
+        <p>BS Statistical Data Science student at International Islamic University Islamabad and aspiring data scientist. Building practical skills in Python, SQL, database fundamentals, data analysis, and accessible web publishing through focused learning projects.</p>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <h3>BS Statistical Data Science</h3>
+        <p>International Islamic University Islamabad, Islamabad, Pakistan</p>
+        <p>Currently studying</p>
+      </section>
+
+      <section>
+        <h2>Technical Skills</h2>
+        <p class="skills"><strong>Programming:</strong> Python</p>
+        <p class="skills"><strong>Data and databases:</strong> SQL, relational database concepts, data analysis</p>
+        <p class="skills"><strong>Web:</strong> HTML, CSS, responsive web foundations</p>
+        <p class="skills"><strong>Tools and publishing:</strong> GitHub, GitHub Pages</p>
+      </section>
+
+      <section>
+        <h2>Projects</h2>
+        <article class="project">
+          <h3>SQL Student Data Analysis</h3>
+          <p>Practice project using SQL queries and structured student data to develop relational data analysis skills. <a href="https://github.com/hamzads077-ds/SQL-Student-Data-Analysis">GitHub project</a></p>
+        </article>
+        <article class="project">
+          <h3>Python Practice Projects</h3>
+          <p>Collection of exercises and small builds for developing Python programming, logic, and problem-solving fluency. <a href="https://github.com/hamzads077-ds/python-practice-projects">GitHub project</a></p>
+        </article>
+        <article class="project">
+          <h3>Mario Database</h3>
+          <p>Database practice project inspired by the Mario universe, focused on structured data and SQL exploration. <a href="https://github.com/hamzads077-ds/mario-database">GitHub project</a></p>
+        </article>
+        <article class="project">
+          <h3>GitHub Pages Practice</h3>
+          <p>Web publishing practice using GitHub Pages and portfolio-oriented HTML and CSS. <a href="https://github.com/hamzads077-ds/skills-github-pages">GitHub project</a></p>
+        </article>
+        <article class="project">
+          <h3>Portfolio Website</h3>
+          <p>Personal portfolio project for presenting data science interests, learning projects, and public profile links. <a href="https://github.com/hamzads077-ds/hamza-portfolio">GitHub project</a></p>
+        </article>
+      </section>
+
+      <section>
+        <h2>Links / Contact</h2>
+        <ul>
+          <li>Email: <a href="mailto:hamza.ds.077@gmail.com">hamza.ds.077@gmail.com</a></li>
+          <li>GitHub: <a href="https://github.com/hamzads077-ds">github.com/hamzads077-ds</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/hamzads077">linkedin.com/in/hamzads077</a></li>
+          <li>Website: <a href="https://hamza-ds.pages.dev">hamza-ds.pages.dev</a></li>
+        </ul>
+      </section>
+
+      <p class="footer">Current student status and selected learning projects are described accurately from public profile details. Updated November 2026.</p>
     </main>
   </body>
 </html>
