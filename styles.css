@@ -40,6 +40,7 @@ em { color: var(--blue); font-style: normal; }
 .hero-intro { max-width: 540px; color: #536071; font-size: 1.05rem; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 34px 0 50px; }
 .button { display: inline-flex; align-items: center; justify-content: center; gap: 18px; min-height: 50px; padding: 0 20px; border: 1px solid var(--ink); font-size: .76rem; font-weight: 800; transition: transform .2s, box-shadow .2s, background .2s; }
+.button > span[aria-hidden="true"] { transform: translateY(2px); }
 .button:hover, .button:focus-visible { transform: translateY(-3px); box-shadow: 4px 4px 0 var(--ink); }
 .button-primary { background: var(--ink); color: var(--white); }
 .button-secondary { background: transparent; }
