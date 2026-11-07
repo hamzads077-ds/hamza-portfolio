@@ -2,7 +2,7 @@
 
 > **Live Website:** [hamzads077.github.io/hamza-portfolio](https://hamzads077.github.io/hamza-portfolio/)
 
-Welcome to the repository for my personal developer & data science portfolio website! This project showcases my academic journey, core technical skills, hands-on data projects, and an ATS-friendly resume download.
+Welcome to the repository for my personal developer & data science portfolio website! This project showcases my academic journey, core technical skills, hands-on data projects.
 
 ## 🛠️ Tech Stack & Badges
 
