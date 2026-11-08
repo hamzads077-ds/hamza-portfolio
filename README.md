@@ -29,7 +29,6 @@ Welcome to the repository for my personal developer & data science portfolio web
 **Muhammad Hamza Shah** — *BS Statistical Data Science (International Islamic University Islamabad)*
 
 <br>
-
 <a href="mailto:hamza.ds.077@gmail.com">
   <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Icon" />
 </a>
@@ -39,7 +38,13 @@ Welcome to the repository for my personal developer & data science portfolio web
 <a href="https://github.com/hamzads077-ds" target="_blank">
   <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Icon" />
 </a>
-
 <br><br>
-
 ⭐ *Feel free to explore the code, star the repository, or reach out for collaboration!*
+
+---
+
+## 📊 Repository Stats
+
+[![Stars](https://img.shields.io/github/stars/hamzads077-ds/hamza-portfolio?style=for-the-badge&logo=github&color=yellow)](https://github.com/hamzads077-ds/hamza-portfolio/stargazers)
+[![Forks](https://img.shields.io/github/forks/hamzads077-ds/hamza-portfolio?style=for-the-badge&logo=github&color=blue)](https://github.com/hamzads077-ds/hamza-portfolio/network/members)
+[![Views](https://komarev.com/ghpvc/?username=hamzads077-ds-hamza-portfolio&style=for-the-badge&color=brightgreen&label=VIEWS)](https://github.com/hamzads077-ds/hamza-portfolio)
